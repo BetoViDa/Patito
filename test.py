@@ -19,7 +19,7 @@ def main(input_file):
     funciones = Dirfuncion()
     parser.funciones = funciones
     
-    # Parsear la entrada según la regla 'r'
+    # Parsear la entrada según la regla 'programa'
     tree = parser.programa()
 
     # Imprimir el árbol de parseo
