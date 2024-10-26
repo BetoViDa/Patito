@@ -1,0 +1,31 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Run ANTLR",
+        "type": "shell",
+        "command": "java",
+        "args": [
+          "-jar",
+          "C:/antlr/antlr-4.13.2-complete.jar", // Ruta del JAR de ANTLR
+          "-Dlanguage=Python3",  // Especifica el lenguaje, puede ser Python, JavaScript, etc.
+          "${file}"
+        ],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "problemMatcher": [],
+        "presentation": {
+          "echo": true,
+          "reveal": "always",
+          "focus": false,
+          "panel": "shared",
+          "showReuseMessage": true,
+          "clear": false
+        },
+        "detail": "ANTLR4 task"
+      }
+    ]
+  }
+  
