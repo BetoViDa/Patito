@@ -15,18 +15,12 @@ def main(input_file):
     stream = CommonTokenStream(lexer)
     parser = PatitoParserParser(stream)
     
-    # Implementación de Directorio de Funciones y tabla de variables
-    funciones = Dirfuncion()
-    parser.funciones = funciones
-    
     # Parsear la entrada según la regla 'programa'
     tree = parser.programa()
 
     # Imprimir el árbol de parseo
     print("Árbol de parseo:")
     print(tree.toStringTree(recog=parser))
-    print("Entrega 2: Directorio de funciones con sus tablas de variables")
-    funciones.get_dir()
     
 if __name__ == "__main__":
     if len(sys.argv) < 2:
