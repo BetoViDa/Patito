@@ -23,11 +23,11 @@ class Dirfuncion:
     def get_dir(self):
         if self.funciones != {}:
             for func_nombre, func_info in self.funciones.items():
-                var_tabla = func_info["var_tabla"].get_tabla()
+                tabla = func_info["tabla"].get_tabla()
                 print(f"Funcion: {func_nombre}")
                 print(f"Tipo: {func_info['tipo']}")
                 print(
-                    f"Variables: {var_tabla if var_tabla else 'Sin variables'}"
+                    f"Variables: {tabla if tabla else 'Sin variables'}"
                 )
             return True
         else:
@@ -38,7 +38,7 @@ class Dirfuncion:
             self.funciones[nombre] = {
                 "nombre": nombre,
                 "tipo": func_tipo,
-                "var_tabla": TablaVar(),
+                "tabla": TablaVar(),
             }
             return True
         else:

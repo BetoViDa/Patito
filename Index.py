@@ -15,12 +15,18 @@ def main(input_file):
     stream = CommonTokenStream(lexer)
     parser = PatitoParserParser(stream)
     
+    funciones = Dirfuncion()
+    parser.funcdir = funciones
+    
     # Parsear la entrada según la regla 'programa'
     tree = parser.programa()
+    
+  
 
     # Imprimir el árbol de parseo
     print("Árbol de parseo:")
     print(tree.toStringTree(recog=parser))
+    funciones.get_dir()
     
 if __name__ == "__main__":
     if len(sys.argv) < 2:

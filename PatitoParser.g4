@@ -5,13 +5,41 @@ options {
 }
 
 programa : 
-    PROGRAM ID SEMI tiene_variables tiene_funciones INICIO cuerpo FIN;
+    PROGRAM ID 
+{
+self.nombrefuncion = $ID.text
+self.funcdir.add_funcion($ID.text,"programa")
+} SEMI tiene_variables tiene_funciones INICIO cuerpo FIN;
+
 tiene_variables : vars?;
 tiene_funciones : funcs*;
-vars: VARS complemento_vars;
-complemento_vars  : ID COMMA complemento_vars  | ID COLON tipo SEMI complemento_vars | ID COLON tipo SEMI ;
+
+vars: VARS (complemento_vars 
+{
+partes = $complemento_vars.text.split(":")  
+variables_separadas = partes[0].split(",")
+tipo = partes[1] 
+for variable in variables_separadas: 
+    self.funcdir.funciones[self.nombrefuncion]["tabla"].add_var(variable,tipo)
+} SEMI )+ ;
+
+complemento_vars  : ID (COMMA ID)* COLON tipo   ;
 tipo : ENTERO | FLOTANTE;
-funcs : NULA ID LPAREN complemento_funcs RPAREN LBRACE tiene_variables cuerpo RBRACE SEMI ;
+
+funcs : NULA ID
+{
+self.nombrefuncion = $ID.text
+self.funcdir.add_funcion($ID.text,"nula")
+} LPAREN complemento_funcs
+{
+argumentos = $complemento_funcs.text.split(",")  
+for argumento in argumentos: 
+    arg_div = argumento.split(":")
+    variable = arg_div[0]
+    tipo = arg_div[1]
+    self.funcdir.funciones[self.nombrefuncion]["tabla"].add_var(variable,tipo)
+} RPAREN LBRACE tiene_variables cuerpo RBRACE SEMI ;
+
 complemento_funcs : (ID COLON tipo)? | (ID COLON tipo COMMA complemento_funcs)?;
 cuerpo : LBRACE tiene_estatuto RBRACE;
 tiene_estatuto : (estatuto tiene_estatuto)?;
