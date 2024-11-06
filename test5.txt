@@ -1,0 +1,20 @@
+programa &Beto;
+vars &A,&B,&C,&D,&E,&f,&G,&H,&I,&J,&K: entero;
+
+inicio
+{
+    si (&A*&B-&C > &D*&E/(&G+&H)) haz {
+        &H = &J*&K*&B;
+        si (&B < &H) haz {
+            &B = &H + &J;
+            escribe(&A + &B * &C, &D - &E);
+        }sino{
+            &A =&A + &B;
+            escribe(&B - &D);
+        };
+    }sino{
+        &A = &D - &C + &B;
+        escribe("el resultado es", &A);
+    };   
+}
+fin;
