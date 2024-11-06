@@ -10,12 +10,9 @@ nula &Maggy(&1:entero){
 
 inicio
 {
-    &var1 = 1;
-    escribe(1);
+    &var2 = 1;
     escribe(&var1);
     escribe("hola patito");
-    escribe(12,"pato",12);
-    &var1 = 1+2+3+4;
     escribe(&var1);
 }
 fin;

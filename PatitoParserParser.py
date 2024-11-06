@@ -10,91 +10,103 @@ else:
 
 def serializedATN():
     return [
-        4,1,34,254,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
+        4,1,34,290,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
         6,2,7,7,7,2,8,7,8,2,9,7,9,2,10,7,10,2,11,7,11,2,12,7,12,2,13,7,13,
         2,14,7,14,2,15,7,15,2,16,7,16,2,17,7,17,2,18,7,18,2,19,7,19,2,20,
         7,20,2,21,7,21,2,22,7,22,2,23,7,23,2,24,7,24,2,25,7,25,2,26,7,26,
-        2,27,7,27,2,28,7,28,2,29,7,29,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,
-        0,1,0,1,1,3,1,72,8,1,1,2,5,2,75,8,2,10,2,12,2,78,9,2,1,3,1,3,1,3,
-        1,3,1,3,4,3,85,8,3,11,3,12,3,86,1,4,1,4,1,4,5,4,92,8,4,10,4,12,4,
-        95,9,4,1,4,1,4,1,4,1,5,1,5,1,6,1,6,1,6,1,6,1,6,1,6,1,6,1,6,1,6,1,
-        6,1,6,1,6,1,6,1,7,1,7,1,7,3,7,118,8,7,1,7,1,7,1,7,1,7,1,7,1,7,3,
-        7,126,8,7,3,7,128,8,7,1,8,1,8,1,8,1,8,1,9,1,9,1,9,3,9,137,8,9,1,
-        10,1,10,1,10,1,10,1,10,3,10,144,8,10,1,11,1,11,1,11,1,11,1,11,1,
-        12,1,12,1,12,1,13,1,13,1,13,1,13,1,13,1,13,1,13,1,13,3,13,162,8,
-        13,1,14,1,14,1,14,1,15,1,15,1,15,1,15,3,15,171,8,15,1,16,1,16,1,
-        16,1,17,1,17,1,17,1,17,3,17,180,8,17,1,18,1,18,1,18,1,18,1,18,1,
-        18,1,18,3,18,189,8,18,1,19,3,19,192,8,19,1,20,1,20,3,20,196,8,20,
-        1,21,1,21,1,22,1,22,1,22,1,22,1,22,1,22,1,22,1,22,1,22,1,23,1,23,
-        3,23,211,8,23,1,24,1,24,1,24,1,24,1,24,1,24,1,24,1,24,1,25,1,25,
-        1,25,1,25,1,25,1,25,1,26,3,26,228,8,26,1,27,1,27,1,27,1,27,1,27,
-        3,27,235,8,27,1,28,1,28,1,28,1,28,1,28,1,28,1,29,1,29,1,29,1,29,
-        1,29,1,29,1,29,1,29,1,29,3,29,252,8,29,1,29,0,0,30,0,2,4,6,8,10,
-        12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52,54,
-        56,58,0,3,1,0,11,12,1,0,25,26,1,0,3,4,252,0,60,1,0,0,0,2,71,1,0,
-        0,0,4,76,1,0,0,0,6,79,1,0,0,0,8,88,1,0,0,0,10,99,1,0,0,0,12,101,
-        1,0,0,0,14,127,1,0,0,0,16,129,1,0,0,0,18,136,1,0,0,0,20,143,1,0,
-        0,0,22,145,1,0,0,0,24,150,1,0,0,0,26,161,1,0,0,0,28,163,1,0,0,0,
-        30,170,1,0,0,0,32,172,1,0,0,0,34,179,1,0,0,0,36,188,1,0,0,0,38,191,
-        1,0,0,0,40,195,1,0,0,0,42,197,1,0,0,0,44,199,1,0,0,0,46,210,1,0,
-        0,0,48,212,1,0,0,0,50,220,1,0,0,0,52,227,1,0,0,0,54,234,1,0,0,0,
-        56,236,1,0,0,0,58,251,1,0,0,0,60,61,5,5,0,0,61,62,5,1,0,0,62,63,
-        6,0,-1,0,63,64,5,23,0,0,64,65,3,2,1,0,65,66,3,4,2,0,66,67,5,7,0,
-        0,67,68,3,16,8,0,68,69,5,15,0,0,69,1,1,0,0,0,70,72,3,6,3,0,71,70,
-        1,0,0,0,71,72,1,0,0,0,72,3,1,0,0,0,73,75,3,12,6,0,74,73,1,0,0,0,
-        75,78,1,0,0,0,76,74,1,0,0,0,76,77,1,0,0,0,77,5,1,0,0,0,78,76,1,0,
-        0,0,79,84,5,16,0,0,80,81,3,8,4,0,81,82,6,3,-1,0,82,83,5,23,0,0,83,
-        85,1,0,0,0,84,80,1,0,0,0,85,86,1,0,0,0,86,84,1,0,0,0,86,87,1,0,0,
-        0,87,7,1,0,0,0,88,93,5,1,0,0,89,90,5,22,0,0,90,92,5,1,0,0,91,89,
-        1,0,0,0,92,95,1,0,0,0,93,91,1,0,0,0,93,94,1,0,0,0,94,96,1,0,0,0,
-        95,93,1,0,0,0,96,97,5,24,0,0,97,98,3,10,5,0,98,9,1,0,0,0,99,100,
-        7,0,0,0,100,11,1,0,0,0,101,102,5,6,0,0,102,103,5,1,0,0,103,104,6,
-        6,-1,0,104,105,5,18,0,0,105,106,3,14,7,0,106,107,6,6,-1,0,107,108,
-        5,19,0,0,108,109,5,20,0,0,109,110,3,2,1,0,110,111,3,16,8,0,111,112,
-        5,21,0,0,112,113,5,23,0,0,113,13,1,0,0,0,114,115,5,1,0,0,115,116,
-        5,24,0,0,116,118,3,10,5,0,117,114,1,0,0,0,117,118,1,0,0,0,118,128,
-        1,0,0,0,119,120,5,1,0,0,120,121,5,24,0,0,121,122,3,10,5,0,122,123,
-        5,22,0,0,123,124,3,14,7,0,124,126,1,0,0,0,125,119,1,0,0,0,125,126,
-        1,0,0,0,126,128,1,0,0,0,127,117,1,0,0,0,127,125,1,0,0,0,128,15,1,
-        0,0,0,129,130,5,20,0,0,130,131,3,18,9,0,131,132,5,21,0,0,132,17,
-        1,0,0,0,133,134,3,20,10,0,134,135,3,18,9,0,135,137,1,0,0,0,136,133,
-        1,0,0,0,136,137,1,0,0,0,137,19,1,0,0,0,138,144,3,22,11,0,139,144,
-        3,44,22,0,140,144,3,48,24,0,141,144,3,50,25,0,142,144,3,56,28,0,
-        143,138,1,0,0,0,143,139,1,0,0,0,143,140,1,0,0,0,143,141,1,0,0,0,
-        143,142,1,0,0,0,144,21,1,0,0,0,145,146,5,1,0,0,146,147,5,29,0,0,
-        147,148,3,24,12,0,148,149,5,23,0,0,149,23,1,0,0,0,150,151,3,28,14,
-        0,151,152,3,26,13,0,152,25,1,0,0,0,153,154,5,33,0,0,154,162,3,28,
-        14,0,155,156,5,32,0,0,156,162,3,28,14,0,157,158,5,26,0,0,158,162,
-        3,28,14,0,159,160,5,31,0,0,160,162,3,28,14,0,161,153,1,0,0,0,161,
-        155,1,0,0,0,161,157,1,0,0,0,161,159,1,0,0,0,161,162,1,0,0,0,162,
-        27,1,0,0,0,163,164,3,32,16,0,164,165,3,30,15,0,165,29,1,0,0,0,166,
-        167,5,25,0,0,167,171,3,28,14,0,168,169,5,26,0,0,169,171,3,28,14,
-        0,170,166,1,0,0,0,170,168,1,0,0,0,170,171,1,0,0,0,171,31,1,0,0,0,
-        172,173,3,36,18,0,173,174,3,34,17,0,174,33,1,0,0,0,175,176,5,27,
-        0,0,176,180,3,32,16,0,177,178,5,28,0,0,178,180,3,32,16,0,179,175,
-        1,0,0,0,179,177,1,0,0,0,179,180,1,0,0,0,180,35,1,0,0,0,181,182,5,
-        18,0,0,182,183,3,24,12,0,183,184,5,19,0,0,184,189,1,0,0,0,185,186,
-        3,38,19,0,186,187,3,40,20,0,187,189,1,0,0,0,188,181,1,0,0,0,188,
-        185,1,0,0,0,189,37,1,0,0,0,190,192,7,1,0,0,191,190,1,0,0,0,191,192,
-        1,0,0,0,192,39,1,0,0,0,193,196,5,1,0,0,194,196,3,42,21,0,195,193,
-        1,0,0,0,195,194,1,0,0,0,196,41,1,0,0,0,197,198,7,2,0,0,198,43,1,
-        0,0,0,199,200,5,9,0,0,200,201,5,18,0,0,201,202,3,24,12,0,202,203,
-        5,19,0,0,203,204,5,17,0,0,204,205,3,16,8,0,205,206,3,46,23,0,206,
-        207,5,23,0,0,207,45,1,0,0,0,208,209,5,10,0,0,209,211,3,16,8,0,210,
-        208,1,0,0,0,210,211,1,0,0,0,211,47,1,0,0,0,212,213,5,8,0,0,213,214,
-        5,18,0,0,214,215,3,24,12,0,215,216,5,19,0,0,216,217,5,17,0,0,217,
-        218,3,16,8,0,218,219,5,23,0,0,219,49,1,0,0,0,220,221,5,1,0,0,221,
-        222,5,18,0,0,222,223,3,52,26,0,223,224,5,19,0,0,224,225,5,23,0,0,
-        225,51,1,0,0,0,226,228,3,54,27,0,227,226,1,0,0,0,227,228,1,0,0,0,
-        228,53,1,0,0,0,229,235,3,24,12,0,230,231,3,24,12,0,231,232,5,22,
-        0,0,232,233,3,54,27,0,233,235,1,0,0,0,234,229,1,0,0,0,234,230,1,
-        0,0,0,235,55,1,0,0,0,236,237,5,13,0,0,237,238,5,18,0,0,238,239,3,
-        58,29,0,239,240,5,19,0,0,240,241,5,23,0,0,241,57,1,0,0,0,242,252,
-        3,24,12,0,243,252,5,2,0,0,244,245,3,24,12,0,245,246,5,22,0,0,246,
-        247,3,58,29,0,247,252,1,0,0,0,248,249,5,2,0,0,249,250,5,22,0,0,250,
-        252,3,58,29,0,251,242,1,0,0,0,251,243,1,0,0,0,251,244,1,0,0,0,251,
-        248,1,0,0,0,252,59,1,0,0,0,19,71,76,86,93,117,125,127,136,143,161,
-        170,179,188,191,195,210,227,234,251
+        2,27,7,27,2,28,7,28,2,29,7,29,2,30,7,30,2,31,7,31,2,32,7,32,1,0,
+        1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,1,3,1,78,8,1,1,2,5,2,81,8,
+        2,10,2,12,2,84,9,2,1,3,1,3,1,3,1,3,1,3,4,3,91,8,3,11,3,12,3,92,1,
+        4,1,4,1,4,5,4,98,8,4,10,4,12,4,101,9,4,1,4,1,4,1,4,1,5,1,5,1,6,1,
+        6,1,6,1,6,1,6,1,6,1,6,1,6,1,6,1,6,1,6,1,6,1,6,1,7,1,7,1,7,3,7,124,
+        8,7,1,7,1,7,1,7,1,7,1,7,1,7,3,7,132,8,7,3,7,134,8,7,1,8,1,8,1,8,
+        1,8,1,9,1,9,1,9,3,9,143,8,9,1,10,1,10,1,10,1,10,1,10,3,10,150,8,
+        10,1,11,1,11,1,11,1,11,1,11,1,11,1,12,1,12,1,12,1,13,1,13,1,13,1,
+        13,3,13,165,8,13,1,14,1,14,1,14,1,14,1,14,1,14,1,14,1,14,3,14,175,
+        8,14,1,15,1,15,1,15,1,15,1,15,1,15,5,15,183,8,15,10,15,12,15,186,
+        9,15,1,16,1,16,1,17,1,17,1,17,1,17,1,17,1,17,5,17,196,8,17,10,17,
+        12,17,199,9,17,1,18,1,18,1,19,1,19,1,19,1,19,1,19,1,19,1,19,3,19,
+        210,8,19,1,20,1,20,1,20,1,20,1,21,3,21,217,8,21,1,22,1,22,1,22,3,
+        22,222,8,22,1,23,1,23,1,24,1,24,1,24,1,24,1,24,1,24,1,24,1,24,1,
+        24,1,24,1,24,1,25,1,25,1,25,3,25,240,8,25,1,26,1,26,1,26,1,26,1,
+        26,1,26,1,26,1,26,1,26,1,26,1,27,1,27,1,27,1,27,1,27,1,27,1,28,3,
+        28,259,8,28,1,29,1,29,1,29,1,29,1,29,3,29,266,8,29,1,30,1,30,1,30,
+        1,30,1,30,1,30,1,31,1,31,1,31,1,31,1,31,1,31,1,31,3,31,281,8,31,
+        1,32,1,32,5,32,285,8,32,10,32,12,32,288,9,32,1,32,0,0,33,0,2,4,6,
+        8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,
+        52,54,56,58,60,62,64,0,4,1,0,11,12,1,0,25,26,1,0,27,28,1,0,3,4,282,
+        0,66,1,0,0,0,2,77,1,0,0,0,4,82,1,0,0,0,6,85,1,0,0,0,8,94,1,0,0,0,
+        10,105,1,0,0,0,12,107,1,0,0,0,14,133,1,0,0,0,16,135,1,0,0,0,18,142,
+        1,0,0,0,20,149,1,0,0,0,22,151,1,0,0,0,24,157,1,0,0,0,26,164,1,0,
+        0,0,28,174,1,0,0,0,30,176,1,0,0,0,32,187,1,0,0,0,34,189,1,0,0,0,
+        36,200,1,0,0,0,38,209,1,0,0,0,40,211,1,0,0,0,42,216,1,0,0,0,44,221,
+        1,0,0,0,46,223,1,0,0,0,48,225,1,0,0,0,50,239,1,0,0,0,52,241,1,0,
+        0,0,54,251,1,0,0,0,56,258,1,0,0,0,58,265,1,0,0,0,60,267,1,0,0,0,
+        62,280,1,0,0,0,64,286,1,0,0,0,66,67,5,5,0,0,67,68,5,1,0,0,68,69,
+        6,0,-1,0,69,70,5,23,0,0,70,71,3,2,1,0,71,72,3,4,2,0,72,73,5,7,0,
+        0,73,74,3,16,8,0,74,75,5,15,0,0,75,1,1,0,0,0,76,78,3,6,3,0,77,76,
+        1,0,0,0,77,78,1,0,0,0,78,3,1,0,0,0,79,81,3,12,6,0,80,79,1,0,0,0,
+        81,84,1,0,0,0,82,80,1,0,0,0,82,83,1,0,0,0,83,5,1,0,0,0,84,82,1,0,
+        0,0,85,90,5,16,0,0,86,87,3,8,4,0,87,88,6,3,-1,0,88,89,5,23,0,0,89,
+        91,1,0,0,0,90,86,1,0,0,0,91,92,1,0,0,0,92,90,1,0,0,0,92,93,1,0,0,
+        0,93,7,1,0,0,0,94,99,5,1,0,0,95,96,5,22,0,0,96,98,5,1,0,0,97,95,
+        1,0,0,0,98,101,1,0,0,0,99,97,1,0,0,0,99,100,1,0,0,0,100,102,1,0,
+        0,0,101,99,1,0,0,0,102,103,5,24,0,0,103,104,3,10,5,0,104,9,1,0,0,
+        0,105,106,7,0,0,0,106,11,1,0,0,0,107,108,5,6,0,0,108,109,5,1,0,0,
+        109,110,6,6,-1,0,110,111,5,18,0,0,111,112,3,14,7,0,112,113,6,6,-1,
+        0,113,114,5,19,0,0,114,115,5,20,0,0,115,116,3,2,1,0,116,117,3,16,
+        8,0,117,118,5,21,0,0,118,119,5,23,0,0,119,13,1,0,0,0,120,121,5,1,
+        0,0,121,122,5,24,0,0,122,124,3,10,5,0,123,120,1,0,0,0,123,124,1,
+        0,0,0,124,134,1,0,0,0,125,126,5,1,0,0,126,127,5,24,0,0,127,128,3,
+        10,5,0,128,129,5,22,0,0,129,130,3,14,7,0,130,132,1,0,0,0,131,125,
+        1,0,0,0,131,132,1,0,0,0,132,134,1,0,0,0,133,123,1,0,0,0,133,131,
+        1,0,0,0,134,15,1,0,0,0,135,136,5,20,0,0,136,137,3,18,9,0,137,138,
+        5,21,0,0,138,17,1,0,0,0,139,140,3,20,10,0,140,141,3,18,9,0,141,143,
+        1,0,0,0,142,139,1,0,0,0,142,143,1,0,0,0,143,19,1,0,0,0,144,150,3,
+        22,11,0,145,150,3,48,24,0,146,150,3,52,26,0,147,150,3,54,27,0,148,
+        150,3,60,30,0,149,144,1,0,0,0,149,145,1,0,0,0,149,146,1,0,0,0,149,
+        147,1,0,0,0,149,148,1,0,0,0,150,21,1,0,0,0,151,152,5,1,0,0,152,153,
+        5,29,0,0,153,154,3,24,12,0,154,155,6,11,-1,0,155,156,5,23,0,0,156,
+        23,1,0,0,0,157,158,3,30,15,0,158,159,3,26,13,0,159,25,1,0,0,0,160,
+        161,3,28,14,0,161,162,3,30,15,0,162,163,6,13,-1,0,163,165,1,0,0,
+        0,164,160,1,0,0,0,164,165,1,0,0,0,165,27,1,0,0,0,166,167,5,33,0,
+        0,167,175,6,14,-1,0,168,169,5,32,0,0,169,175,6,14,-1,0,170,171,5,
+        30,0,0,171,175,6,14,-1,0,172,173,5,31,0,0,173,175,6,14,-1,0,174,
+        166,1,0,0,0,174,168,1,0,0,0,174,170,1,0,0,0,174,172,1,0,0,0,175,
+        29,1,0,0,0,176,184,3,34,17,0,177,178,3,32,16,0,178,179,6,15,-1,0,
+        179,180,3,34,17,0,180,181,6,15,-1,0,181,183,1,0,0,0,182,177,1,0,
+        0,0,183,186,1,0,0,0,184,182,1,0,0,0,184,185,1,0,0,0,185,31,1,0,0,
+        0,186,184,1,0,0,0,187,188,7,1,0,0,188,33,1,0,0,0,189,197,3,38,19,
+        0,190,191,3,36,18,0,191,192,6,17,-1,0,192,193,3,38,19,0,193,194,
+        6,17,-1,0,194,196,1,0,0,0,195,190,1,0,0,0,196,199,1,0,0,0,197,195,
+        1,0,0,0,197,198,1,0,0,0,198,35,1,0,0,0,199,197,1,0,0,0,200,201,7,
+        2,0,0,201,37,1,0,0,0,202,203,5,18,0,0,203,204,3,24,12,0,204,205,
+        5,19,0,0,205,210,1,0,0,0,206,207,3,40,20,0,207,208,6,19,-1,0,208,
+        210,1,0,0,0,209,202,1,0,0,0,209,206,1,0,0,0,210,39,1,0,0,0,211,212,
+        3,42,21,0,212,213,3,44,22,0,213,214,6,20,-1,0,214,41,1,0,0,0,215,
+        217,7,1,0,0,216,215,1,0,0,0,216,217,1,0,0,0,217,43,1,0,0,0,218,219,
+        5,1,0,0,219,222,6,22,-1,0,220,222,3,46,23,0,221,218,1,0,0,0,221,
+        220,1,0,0,0,222,45,1,0,0,0,223,224,7,3,0,0,224,47,1,0,0,0,225,226,
+        5,9,0,0,226,227,5,18,0,0,227,228,3,24,12,0,228,229,5,19,0,0,229,
+        230,6,24,-1,0,230,231,5,17,0,0,231,232,3,16,8,0,232,233,3,50,25,
+        0,233,234,5,23,0,0,234,235,6,24,-1,0,235,49,1,0,0,0,236,237,5,10,
+        0,0,237,238,6,25,-1,0,238,240,3,16,8,0,239,236,1,0,0,0,239,240,1,
+        0,0,0,240,51,1,0,0,0,241,242,5,8,0,0,242,243,5,18,0,0,243,244,3,
+        24,12,0,244,245,5,19,0,0,245,246,5,17,0,0,246,247,6,26,-1,0,247,
+        248,3,16,8,0,248,249,5,23,0,0,249,250,6,26,-1,0,250,53,1,0,0,0,251,
+        252,5,1,0,0,252,253,5,18,0,0,253,254,3,56,28,0,254,255,5,19,0,0,
+        255,256,5,23,0,0,256,55,1,0,0,0,257,259,3,58,29,0,258,257,1,0,0,
+        0,258,259,1,0,0,0,259,57,1,0,0,0,260,266,3,24,12,0,261,262,3,24,
+        12,0,262,263,5,22,0,0,263,264,3,58,29,0,264,266,1,0,0,0,265,260,
+        1,0,0,0,265,261,1,0,0,0,266,59,1,0,0,0,267,268,5,13,0,0,268,269,
+        5,18,0,0,269,270,3,62,31,0,270,271,5,19,0,0,271,272,5,23,0,0,272,
+        61,1,0,0,0,273,274,3,24,12,0,274,275,6,31,-1,0,275,276,3,64,32,0,
+        276,281,1,0,0,0,277,278,5,2,0,0,278,279,6,31,-1,0,279,281,3,64,32,
+        0,280,273,1,0,0,0,280,277,1,0,0,0,281,63,1,0,0,0,282,283,5,22,0,
+        0,283,285,3,62,31,0,284,282,1,0,0,0,285,288,1,0,0,0,286,284,1,0,
+        0,0,286,287,1,0,0,0,287,65,1,0,0,0,288,286,1,0,0,0,21,77,82,92,99,
+        123,131,133,142,149,164,174,184,197,209,216,221,239,258,265,280,
+        286
     ]
 
 class PatitoParserParser ( Parser ):
@@ -135,31 +147,34 @@ class PatitoParserParser ( Parser ):
     RULE_asigna = 11
     RULE_expresion = 12
     RULE_complemento_expresion = 13
-    RULE_exp = 14
-    RULE_complemento_exp = 15
-    RULE_termino = 16
-    RULE_complemento_termino = 17
-    RULE_factor = 18
-    RULE_tiene_signo = 19
-    RULE_tiene_var = 20
-    RULE_cte = 21
-    RULE_condicion = 22
-    RULE_complemento_cond = 23
-    RULE_ciclo = 24
-    RULE_llamada = 25
-    RULE_complemento_llamada = 26
-    RULE_tiene_expresion = 27
-    RULE_imprime = 28
-    RULE_complemento_imprime = 29
+    RULE_exp_logicas = 14
+    RULE_exp = 15
+    RULE_exp_signo = 16
+    RULE_termino = 17
+    RULE_term_signo = 18
+    RULE_factor = 19
+    RULE_factor_operaciones = 20
+    RULE_tiene_signo = 21
+    RULE_tiene_var = 22
+    RULE_cte = 23
+    RULE_condicion = 24
+    RULE_complemento_cond = 25
+    RULE_ciclo = 26
+    RULE_llamada = 27
+    RULE_complemento_llamada = 28
+    RULE_tiene_expresion = 29
+    RULE_imprime = 30
+    RULE_complemento_imprime = 31
+    RULE_complemento_imprime_aux = 32
 
     ruleNames =  [ "programa", "tiene_variables", "tiene_funciones", "vars", 
                    "complemento_vars", "tipo", "funcs", "complemento_funcs", 
                    "cuerpo", "tiene_estatuto", "estatuto", "asigna", "expresion", 
-                   "complemento_expresion", "exp", "complemento_exp", "termino", 
-                   "complemento_termino", "factor", "tiene_signo", "tiene_var", 
-                   "cte", "condicion", "complemento_cond", "ciclo", "llamada", 
-                   "complemento_llamada", "tiene_expresion", "imprime", 
-                   "complemento_imprime" ]
+                   "complemento_expresion", "exp_logicas", "exp", "exp_signo", 
+                   "termino", "term_signo", "factor", "factor_operaciones", 
+                   "tiene_signo", "tiene_var", "cte", "condicion", "complemento_cond", 
+                   "ciclo", "llamada", "complemento_llamada", "tiene_expresion", 
+                   "imprime", "complemento_imprime", "complemento_imprime_aux" ]
 
     EOF = Token.EOF
     ID=1
@@ -261,25 +276,25 @@ class PatitoParserParser ( Parser ):
         self.enterRule(localctx, 0, self.RULE_programa)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 60
+            self.state = 66
             self.match(PatitoParserParser.PROGRAM)
-            self.state = 61
+            self.state = 67
             localctx._ID = self.match(PatitoParserParser.ID)
 
             self.nombrefuncion = (None if localctx._ID is None else localctx._ID.text)
             self.funcdir.add_funcion((None if localctx._ID is None else localctx._ID.text),"programa")
 
-            self.state = 63
+            self.state = 69
             self.match(PatitoParserParser.SEMI)
-            self.state = 64
+            self.state = 70
             self.tiene_variables()
-            self.state = 65
+            self.state = 71
             self.tiene_funciones()
-            self.state = 66
+            self.state = 72
             self.match(PatitoParserParser.INICIO)
-            self.state = 67
+            self.state = 73
             self.cuerpo()
-            self.state = 68
+            self.state = 74
             self.match(PatitoParserParser.FIN)
         except RecognitionException as re:
             localctx.exception = re
@@ -322,11 +337,11 @@ class PatitoParserParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 71
+            self.state = 77
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==16:
-                self.state = 70
+                self.state = 76
                 self.vars_()
 
 
@@ -374,13 +389,13 @@ class PatitoParserParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 76
+            self.state = 82
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while _la==6:
-                self.state = 73
+                self.state = 79
                 self.funcs()
-                self.state = 78
+                self.state = 84
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
@@ -438,13 +453,13 @@ class PatitoParserParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 79
+            self.state = 85
             self.match(PatitoParserParser.VARS)
-            self.state = 84 
+            self.state = 90 
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while True:
-                self.state = 80
+                self.state = 86
                 localctx._complemento_vars = self.complemento_vars()
 
                 partes = (None if localctx._complemento_vars is None else self._input.getText(localctx._complemento_vars.start,localctx._complemento_vars.stop)).split(":")  
@@ -453,9 +468,9 @@ class PatitoParserParser ( Parser ):
                 for variable in variables_separadas: 
                     self.funcdir.funciones[self.nombrefuncion]["tabla"].add_var(variable,tipo)
 
-                self.state = 82
+                self.state = 88
                 self.match(PatitoParserParser.SEMI)
-                self.state = 86 
+                self.state = 92 
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if not (_la==1):
@@ -517,23 +532,23 @@ class PatitoParserParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 88
+            self.state = 94
             self.match(PatitoParserParser.ID)
-            self.state = 93
+            self.state = 99
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while _la==22:
-                self.state = 89
-                self.match(PatitoParserParser.COMMA)
-                self.state = 90
-                self.match(PatitoParserParser.ID)
                 self.state = 95
+                self.match(PatitoParserParser.COMMA)
+                self.state = 96
+                self.match(PatitoParserParser.ID)
+                self.state = 101
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
-            self.state = 96
+            self.state = 102
             self.match(PatitoParserParser.COLON)
-            self.state = 97
+            self.state = 103
             self.tipo()
         except RecognitionException as re:
             localctx.exception = re
@@ -578,7 +593,7 @@ class PatitoParserParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 99
+            self.state = 105
             _la = self._input.LA(1)
             if not(_la==11 or _la==12):
                 self._errHandler.recoverInline(self)
@@ -656,17 +671,17 @@ class PatitoParserParser ( Parser ):
         self.enterRule(localctx, 12, self.RULE_funcs)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 101
+            self.state = 107
             self.match(PatitoParserParser.NULA)
-            self.state = 102
+            self.state = 108
             localctx._ID = self.match(PatitoParserParser.ID)
 
             self.nombrefuncion = (None if localctx._ID is None else localctx._ID.text)
             self.funcdir.add_funcion((None if localctx._ID is None else localctx._ID.text),"nula")
 
-            self.state = 104
+            self.state = 110
             self.match(PatitoParserParser.LPAREN)
-            self.state = 105
+            self.state = 111
             localctx._complemento_funcs = self.complemento_funcs()
 
             argumentos = (None if localctx._complemento_funcs is None else self._input.getText(localctx._complemento_funcs.start,localctx._complemento_funcs.stop)).split(",")  
@@ -676,17 +691,17 @@ class PatitoParserParser ( Parser ):
                 tipo = arg_div[1]
                 self.funcdir.funciones[self.nombrefuncion]["tabla"].add_var(variable,tipo)
 
-            self.state = 107
+            self.state = 113
             self.match(PatitoParserParser.RPAREN)
-            self.state = 108
+            self.state = 114
             self.match(PatitoParserParser.LBRACE)
-            self.state = 109
+            self.state = 115
             self.tiene_variables()
-            self.state = 110
+            self.state = 116
             self.cuerpo()
-            self.state = 111
+            self.state = 117
             self.match(PatitoParserParser.RBRACE)
-            self.state = 112
+            self.state = 118
             self.match(PatitoParserParser.SEMI)
         except RecognitionException as re:
             localctx.exception = re
@@ -741,20 +756,20 @@ class PatitoParserParser ( Parser ):
         self.enterRule(localctx, 14, self.RULE_complemento_funcs)
         self._la = 0 # Token type
         try:
-            self.state = 127
+            self.state = 133
             self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,6,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 117
+                self.state = 123
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if _la==1:
-                    self.state = 114
+                    self.state = 120
                     self.match(PatitoParserParser.ID)
-                    self.state = 115
+                    self.state = 121
                     self.match(PatitoParserParser.COLON)
-                    self.state = 116
+                    self.state = 122
                     self.tipo()
 
 
@@ -762,19 +777,19 @@ class PatitoParserParser ( Parser ):
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 125
+                self.state = 131
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if _la==1:
-                    self.state = 119
+                    self.state = 125
                     self.match(PatitoParserParser.ID)
-                    self.state = 120
+                    self.state = 126
                     self.match(PatitoParserParser.COLON)
-                    self.state = 121
+                    self.state = 127
                     self.tipo()
-                    self.state = 122
+                    self.state = 128
                     self.match(PatitoParserParser.COMMA)
-                    self.state = 123
+                    self.state = 129
                     self.complemento_funcs()
 
 
@@ -827,11 +842,11 @@ class PatitoParserParser ( Parser ):
         self.enterRule(localctx, 16, self.RULE_cuerpo)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 129
+            self.state = 135
             self.match(PatitoParserParser.LBRACE)
-            self.state = 130
+            self.state = 136
             self.tiene_estatuto()
-            self.state = 131
+            self.state = 137
             self.match(PatitoParserParser.RBRACE)
         except RecognitionException as re:
             localctx.exception = re
@@ -878,13 +893,13 @@ class PatitoParserParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 136
+            self.state = 142
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if (((_la) & ~0x3f) == 0 and ((1 << _la) & 8962) != 0):
-                self.state = 133
+                self.state = 139
                 self.estatuto()
-                self.state = 134
+                self.state = 140
                 self.tiene_estatuto()
 
 
@@ -943,36 +958,36 @@ class PatitoParserParser ( Parser ):
         localctx = PatitoParserParser.EstatutoContext(self, self._ctx, self.state)
         self.enterRule(localctx, 20, self.RULE_estatuto)
         try:
-            self.state = 143
+            self.state = 149
             self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,8,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 138
+                self.state = 144
                 self.asigna()
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 139
+                self.state = 145
                 self.condicion()
                 pass
 
             elif la_ == 3:
                 self.enterOuterAlt(localctx, 3)
-                self.state = 140
+                self.state = 146
                 self.ciclo()
                 pass
 
             elif la_ == 4:
                 self.enterOuterAlt(localctx, 4)
-                self.state = 141
+                self.state = 147
                 self.llamada()
                 pass
 
             elif la_ == 5:
                 self.enterOuterAlt(localctx, 5)
-                self.state = 142
+                self.state = 148
                 self.imprime()
                 pass
 
@@ -992,6 +1007,7 @@ class PatitoParserParser ( Parser ):
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
+            self._ID = None # Token
 
         def ID(self):
             return self.getToken(PatitoParserParser.ID, 0)
@@ -1026,13 +1042,18 @@ class PatitoParserParser ( Parser ):
         self.enterRule(localctx, 22, self.RULE_asigna)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 145
-            self.match(PatitoParserParser.ID)
-            self.state = 146
+            self.state = 151
+            localctx._ID = self.match(PatitoParserParser.ID)
+            self.state = 152
             self.match(PatitoParserParser.EQUAL)
-            self.state = 147
+            self.state = 153
             self.expresion()
-            self.state = 148
+
+            asignar = (None if localctx._ID is None else localctx._ID.text)
+            op = self.cuadruplo.pop_operating()
+            self.cuadruplo.add_assign_Cuadruplo("=",op,asignar)
+
+            self.state = 155
             self.match(PatitoParserParser.SEMI)
         except RecognitionException as re:
             localctx.exception = re
@@ -1078,9 +1099,9 @@ class PatitoParserParser ( Parser ):
         self.enterRule(localctx, 24, self.RULE_expresion)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 150
+            self.state = 157
             self.exp()
-            self.state = 151
+            self.state = 158
             self.complemento_expresion()
         except RecognitionException as re:
             localctx.exception = re
@@ -1098,21 +1119,13 @@ class PatitoParserParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def GT(self):
-            return self.getToken(PatitoParserParser.GT, 0)
+        def exp_logicas(self):
+            return self.getTypedRuleContext(PatitoParserParser.Exp_logicasContext,0)
+
 
         def exp(self):
             return self.getTypedRuleContext(PatitoParserParser.ExpContext,0)
 
-
-        def LT(self):
-            return self.getToken(PatitoParserParser.LT, 0)
-
-        def MINUS(self):
-            return self.getToken(PatitoParserParser.MINUS, 0)
-
-        def DEQ(self):
-            return self.getToken(PatitoParserParser.DEQ, 0)
 
         def getRuleIndex(self):
             return PatitoParserParser.RULE_complemento_expresion
@@ -1132,39 +1145,113 @@ class PatitoParserParser ( Parser ):
 
         localctx = PatitoParserParser.Complemento_expresionContext(self, self._ctx, self.state)
         self.enterRule(localctx, 26, self.RULE_complemento_expresion)
+        self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 161
+            self.state = 164
+            self._errHandler.sync(self)
+            _la = self._input.LA(1)
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & 16106127360) != 0):
+                self.state = 160
+                self.exp_logicas()
+                self.state = 161
+                self.exp()
+
+                temp = self.cuadruplo.nuevo_temp()
+                operador = self.cuadruplo.pop_operator()
+                op2 = self.cuadruplo.pop_operating()
+                op1 = self.cuadruplo.pop_operating()
+                tempadd = self.funcdir.funciones[self.nombrefuncion]["tabla"].add_var(temp,"temp")
+                self.cuadruplo.add_Cuadruplo(operador,op1,op2,temp)
+                self.cuadruplo.push_operating(temp)
+
+
+
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class Exp_logicasContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def GT(self):
+            return self.getToken(PatitoParserParser.GT, 0)
+
+        def LT(self):
+            return self.getToken(PatitoParserParser.LT, 0)
+
+        def NEQ(self):
+            return self.getToken(PatitoParserParser.NEQ, 0)
+
+        def DEQ(self):
+            return self.getToken(PatitoParserParser.DEQ, 0)
+
+        def getRuleIndex(self):
+            return PatitoParserParser.RULE_exp_logicas
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterExp_logicas" ):
+                listener.enterExp_logicas(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitExp_logicas" ):
+                listener.exitExp_logicas(self)
+
+
+
+
+    def exp_logicas(self):
+
+        localctx = PatitoParserParser.Exp_logicasContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 28, self.RULE_exp_logicas)
+        try:
+            self.state = 174
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [33]:
-                self.state = 153
+                self.enterOuterAlt(localctx, 1)
+                self.state = 166
                 self.match(PatitoParserParser.GT)
-                self.state = 154
-                self.exp()
+
+                self.cuadruplo.push_operator('>')
+
                 pass
             elif token in [32]:
-                self.state = 155
+                self.enterOuterAlt(localctx, 2)
+                self.state = 168
                 self.match(PatitoParserParser.LT)
-                self.state = 156
-                self.exp()
+
+                self.cuadruplo.push_operator('<')
+
                 pass
-            elif token in [26]:
-                self.state = 157
-                self.match(PatitoParserParser.MINUS)
-                self.state = 158
-                self.exp()
+            elif token in [30]:
+                self.enterOuterAlt(localctx, 3)
+                self.state = 170
+                self.match(PatitoParserParser.NEQ)
+
+                self.cuadruplo.push_operator('!=')
+
                 pass
             elif token in [31]:
-                self.state = 159
+                self.enterOuterAlt(localctx, 4)
+                self.state = 172
                 self.match(PatitoParserParser.DEQ)
-                self.state = 160
-                self.exp()
-                pass
-            elif token in [19, 22, 23]:
+
+                self.cuadruplo.push_operator('==')
+
                 pass
             else:
-                pass
+                raise NoViableAltException(self)
+
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1180,13 +1267,20 @@ class PatitoParserParser ( Parser ):
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
+            self._exp_signo = None # Exp_signoContext
 
-        def termino(self):
-            return self.getTypedRuleContext(PatitoParserParser.TerminoContext,0)
+        def termino(self, i:int=None):
+            if i is None:
+                return self.getTypedRuleContexts(PatitoParserParser.TerminoContext)
+            else:
+                return self.getTypedRuleContext(PatitoParserParser.TerminoContext,i)
 
 
-        def complemento_exp(self):
-            return self.getTypedRuleContext(PatitoParserParser.Complemento_expContext,0)
+        def exp_signo(self, i:int=None):
+            if i is None:
+                return self.getTypedRuleContexts(PatitoParserParser.Exp_signoContext)
+            else:
+                return self.getTypedRuleContext(PatitoParserParser.Exp_signoContext,i)
 
 
         def getRuleIndex(self):
@@ -1206,13 +1300,36 @@ class PatitoParserParser ( Parser ):
     def exp(self):
 
         localctx = PatitoParserParser.ExpContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 28, self.RULE_exp)
+        self.enterRule(localctx, 30, self.RULE_exp)
+        self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 163
+            self.state = 176
             self.termino()
-            self.state = 164
-            self.complemento_exp()
+            self.state = 184
+            self._errHandler.sync(self)
+            _la = self._input.LA(1)
+            while _la==25 or _la==26:
+                self.state = 177
+                localctx._exp_signo = self.exp_signo()
+
+                self.cuadruplo.push_operator((None if localctx._exp_signo is None else self._input.getText(localctx._exp_signo.start,localctx._exp_signo.stop)));
+
+                self.state = 179
+                self.termino()
+
+                temp = self.cuadruplo.nuevo_temp();
+                operador = self.cuadruplo.pop_operator();
+                op2 = self.cuadruplo.pop_operating();
+                op1 = self.cuadruplo.pop_operating();
+                tempadd = self.funcdir.funciones[self.nombrefuncion]["tabla"].add_var(temp, "temp");
+                self.cuadruplo.add_Cuadruplo(operador, op1, op2, temp);
+                self.cuadruplo.push_operating(temp);
+
+                self.state = 186
+                self._errHandler.sync(self)
+                _la = self._input.LA(1)
+
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1222,7 +1339,7 @@ class PatitoParserParser ( Parser ):
         return localctx
 
 
-    class Complemento_expContext(ParserRuleContext):
+    class Exp_signoContext(ParserRuleContext):
         __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
@@ -1232,49 +1349,37 @@ class PatitoParserParser ( Parser ):
         def PLUS(self):
             return self.getToken(PatitoParserParser.PLUS, 0)
 
-        def exp(self):
-            return self.getTypedRuleContext(PatitoParserParser.ExpContext,0)
-
-
         def MINUS(self):
             return self.getToken(PatitoParserParser.MINUS, 0)
 
         def getRuleIndex(self):
-            return PatitoParserParser.RULE_complemento_exp
+            return PatitoParserParser.RULE_exp_signo
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterComplemento_exp" ):
-                listener.enterComplemento_exp(self)
+            if hasattr( listener, "enterExp_signo" ):
+                listener.enterExp_signo(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitComplemento_exp" ):
-                listener.exitComplemento_exp(self)
+            if hasattr( listener, "exitExp_signo" ):
+                listener.exitExp_signo(self)
 
 
 
 
-    def complemento_exp(self):
+    def exp_signo(self):
 
-        localctx = PatitoParserParser.Complemento_expContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 30, self.RULE_complemento_exp)
+        localctx = PatitoParserParser.Exp_signoContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 32, self.RULE_exp_signo)
+        self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 170
-            self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,10,self._ctx)
-            if la_ == 1:
-                self.state = 166
-                self.match(PatitoParserParser.PLUS)
-                self.state = 167
-                self.exp()
-
-            elif la_ == 2:
-                self.state = 168
-                self.match(PatitoParserParser.MINUS)
-                self.state = 169
-                self.exp()
-
-
+            self.state = 187
+            _la = self._input.LA(1)
+            if not(_la==25 or _la==26):
+                self._errHandler.recoverInline(self)
+            else:
+                self._errHandler.reportMatch(self)
+                self.consume()
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1290,13 +1395,20 @@ class PatitoParserParser ( Parser ):
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
+            self._term_signo = None # Term_signoContext
 
-        def factor(self):
-            return self.getTypedRuleContext(PatitoParserParser.FactorContext,0)
+        def factor(self, i:int=None):
+            if i is None:
+                return self.getTypedRuleContexts(PatitoParserParser.FactorContext)
+            else:
+                return self.getTypedRuleContext(PatitoParserParser.FactorContext,i)
 
 
-        def complemento_termino(self):
-            return self.getTypedRuleContext(PatitoParserParser.Complemento_terminoContext,0)
+        def term_signo(self, i:int=None):
+            if i is None:
+                return self.getTypedRuleContexts(PatitoParserParser.Term_signoContext)
+            else:
+                return self.getTypedRuleContext(PatitoParserParser.Term_signoContext,i)
 
 
         def getRuleIndex(self):
@@ -1316,13 +1428,36 @@ class PatitoParserParser ( Parser ):
     def termino(self):
 
         localctx = PatitoParserParser.TerminoContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 32, self.RULE_termino)
+        self.enterRule(localctx, 34, self.RULE_termino)
+        self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 172
+            self.state = 189
             self.factor()
-            self.state = 173
-            self.complemento_termino()
+            self.state = 197
+            self._errHandler.sync(self)
+            _la = self._input.LA(1)
+            while _la==27 or _la==28:
+                self.state = 190
+                localctx._term_signo = self.term_signo()
+
+                self.cuadruplo.push_operator((None if localctx._term_signo is None else self._input.getText(localctx._term_signo.start,localctx._term_signo.stop)));
+
+                self.state = 192
+                self.factor()
+
+                temp = self.cuadruplo.nuevo_temp();
+                operador = self.cuadruplo.pop_operator();
+                op2 = self.cuadruplo.pop_operating();
+                op1 = self.cuadruplo.pop_operating();
+                tempadd = self.funcdir.funciones[self.nombrefuncion]["tabla"].add_var(temp, "temp");
+                self.cuadruplo.add_Cuadruplo(operador, op1, op2, temp);
+                self.cuadruplo.push_operating(temp);
+
+                self.state = 199
+                self._errHandler.sync(self)
+                _la = self._input.LA(1)
+
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1332,7 +1467,7 @@ class PatitoParserParser ( Parser ):
         return localctx
 
 
-    class Complemento_terminoContext(ParserRuleContext):
+    class Term_signoContext(ParserRuleContext):
         __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
@@ -1342,52 +1477,37 @@ class PatitoParserParser ( Parser ):
         def MUL(self):
             return self.getToken(PatitoParserParser.MUL, 0)
 
-        def termino(self):
-            return self.getTypedRuleContext(PatitoParserParser.TerminoContext,0)
-
-
         def DIV(self):
             return self.getToken(PatitoParserParser.DIV, 0)
 
         def getRuleIndex(self):
-            return PatitoParserParser.RULE_complemento_termino
+            return PatitoParserParser.RULE_term_signo
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterComplemento_termino" ):
-                listener.enterComplemento_termino(self)
+            if hasattr( listener, "enterTerm_signo" ):
+                listener.enterTerm_signo(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitComplemento_termino" ):
-                listener.exitComplemento_termino(self)
+            if hasattr( listener, "exitTerm_signo" ):
+                listener.exitTerm_signo(self)
 
 
 
 
-    def complemento_termino(self):
+    def term_signo(self):
 
-        localctx = PatitoParserParser.Complemento_terminoContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 34, self.RULE_complemento_termino)
+        localctx = PatitoParserParser.Term_signoContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 36, self.RULE_term_signo)
+        self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 179
-            self._errHandler.sync(self)
-            token = self._input.LA(1)
-            if token in [27]:
-                self.state = 175
-                self.match(PatitoParserParser.MUL)
-                self.state = 176
-                self.termino()
-                pass
-            elif token in [28]:
-                self.state = 177
-                self.match(PatitoParserParser.DIV)
-                self.state = 178
-                self.termino()
-                pass
-            elif token in [19, 22, 23, 25, 26, 31, 32, 33]:
-                pass
+            self.state = 200
+            _la = self._input.LA(1)
+            if not(_la==27 or _la==28):
+                self._errHandler.recoverInline(self)
             else:
-                pass
+                self._errHandler.reportMatch(self)
+                self.consume()
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1403,6 +1523,7 @@ class PatitoParserParser ( Parser ):
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
+            self._factor_operaciones = None # Factor_operacionesContext
 
         def LPAREN(self):
             return self.getToken(PatitoParserParser.LPAREN, 0)
@@ -1414,12 +1535,8 @@ class PatitoParserParser ( Parser ):
         def RPAREN(self):
             return self.getToken(PatitoParserParser.RPAREN, 0)
 
-        def tiene_signo(self):
-            return self.getTypedRuleContext(PatitoParserParser.Tiene_signoContext,0)
-
-
-        def tiene_var(self):
-            return self.getTypedRuleContext(PatitoParserParser.Tiene_varContext,0)
+        def factor_operaciones(self):
+            return self.getTypedRuleContext(PatitoParserParser.Factor_operacionesContext,0)
 
 
         def getRuleIndex(self):
@@ -1439,29 +1556,83 @@ class PatitoParserParser ( Parser ):
     def factor(self):
 
         localctx = PatitoParserParser.FactorContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 36, self.RULE_factor)
+        self.enterRule(localctx, 38, self.RULE_factor)
         try:
-            self.state = 188
+            self.state = 209
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [18]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 181
+                self.state = 202
                 self.match(PatitoParserParser.LPAREN)
-                self.state = 182
+                self.state = 203
                 self.expresion()
-                self.state = 183
+                self.state = 204
                 self.match(PatitoParserParser.RPAREN)
                 pass
             elif token in [1, 3, 4, 25, 26]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 185
-                self.tiene_signo()
-                self.state = 186
-                self.tiene_var()
+                self.state = 206
+                localctx._factor_operaciones = self.factor_operaciones()
+
+                self.cuadruplo.push_operating((None if localctx._factor_operaciones is None else self._input.getText(localctx._factor_operaciones.start,localctx._factor_operaciones.stop)))
+
                 pass
             else:
                 raise NoViableAltException(self)
+
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class Factor_operacionesContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+            self._tiene_var = None # Tiene_varContext
+
+        def tiene_signo(self):
+            return self.getTypedRuleContext(PatitoParserParser.Tiene_signoContext,0)
+
+
+        def tiene_var(self):
+            return self.getTypedRuleContext(PatitoParserParser.Tiene_varContext,0)
+
+
+        def getRuleIndex(self):
+            return PatitoParserParser.RULE_factor_operaciones
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterFactor_operaciones" ):
+                listener.enterFactor_operaciones(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitFactor_operaciones" ):
+                listener.exitFactor_operaciones(self)
+
+
+
+
+    def factor_operaciones(self):
+
+        localctx = PatitoParserParser.Factor_operacionesContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 40, self.RULE_factor_operaciones)
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 211
+            self.tiene_signo()
+            self.state = 212
+            localctx._tiene_var = self.tiene_var()
+
+            val = (None if localctx._tiene_var is None else self._input.getText(localctx._tiene_var.start,localctx._tiene_var.stop))
+            llave = self.funcdir.funciones[self.nombrefuncion]["tabla"].buscar_var(val)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -1502,15 +1673,15 @@ class PatitoParserParser ( Parser ):
     def tiene_signo(self):
 
         localctx = PatitoParserParser.Tiene_signoContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 38, self.RULE_tiene_signo)
+        self.enterRule(localctx, 42, self.RULE_tiene_signo)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 191
+            self.state = 216
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==25 or _la==26:
-                self.state = 190
+                self.state = 215
                 _la = self._input.LA(1)
                 if not(_la==25 or _la==26):
                     self._errHandler.recoverInline(self)
@@ -1534,6 +1705,7 @@ class PatitoParserParser ( Parser ):
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
+            self._ID = None # Token
 
         def ID(self):
             return self.getToken(PatitoParserParser.ID, 0)
@@ -1559,19 +1731,23 @@ class PatitoParserParser ( Parser ):
     def tiene_var(self):
 
         localctx = PatitoParserParser.Tiene_varContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 40, self.RULE_tiene_var)
+        self.enterRule(localctx, 44, self.RULE_tiene_var)
         try:
-            self.state = 195
+            self.state = 221
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [1]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 193
-                self.match(PatitoParserParser.ID)
+                self.state = 218
+                localctx._ID = self.match(PatitoParserParser.ID)
+
+                if not self.funcdir.funciones[self.nombrefuncion]["tabla"].buscar_var((None if localctx._ID is None else localctx._ID.text)):
+                    raise Exception(f"Varible {(None if localctx._ID is None else localctx._ID.text)} no declarada")
+
                 pass
             elif token in [3, 4]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 194
+                self.state = 220
                 self.cte()
                 pass
             else:
@@ -1616,11 +1792,11 @@ class PatitoParserParser ( Parser ):
     def cte(self):
 
         localctx = PatitoParserParser.CteContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 42, self.RULE_cte)
+        self.enterRule(localctx, 46, self.RULE_cte)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 197
+            self.state = 223
             _la = self._input.LA(1)
             if not(_la==3 or _la==4):
                 self._errHandler.recoverInline(self)
@@ -1687,25 +1863,36 @@ class PatitoParserParser ( Parser ):
     def condicion(self):
 
         localctx = PatitoParserParser.CondicionContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 44, self.RULE_condicion)
+        self.enterRule(localctx, 48, self.RULE_condicion)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 199
+            self.state = 225
             self.match(PatitoParserParser.SI)
-            self.state = 200
+            self.state = 226
             self.match(PatitoParserParser.LPAREN)
-            self.state = 201
+            self.state = 227
             self.expresion()
-            self.state = 202
+            self.state = 228
             self.match(PatitoParserParser.RPAREN)
-            self.state = 203
+
+            falso = self.cuadruplo.nuevo_label()
+            op =self.cuadruplo.pop_operating()
+            self.cuadruplo.add_conditional_jump(op,falso)
+            self.cuadruplo.push_jump(falso)
+
+            self.state = 230
             self.match(PatitoParserParser.HAZ)
-            self.state = 204
+            self.state = 231
             self.cuerpo()
-            self.state = 205
+            self.state = 232
             self.complemento_cond()
-            self.state = 206
+            self.state = 233
             self.match(PatitoParserParser.SEMI)
+
+            final = self.cuadruplo.pop_jump()
+            cuentafinal = self.cuadruplo.get_current_count()
+            self.cuadruplo.edit_Cuadruplo_by_label(final,cuentafinal) 
+
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1746,17 +1933,25 @@ class PatitoParserParser ( Parser ):
     def complemento_cond(self):
 
         localctx = PatitoParserParser.Complemento_condContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 46, self.RULE_complemento_cond)
+        self.enterRule(localctx, 50, self.RULE_complemento_cond)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 210
+            self.state = 239
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==10:
-                self.state = 208
+                self.state = 236
                 self.match(PatitoParserParser.SINO)
-                self.state = 209
+
+                bypass = self.cuadruplo.nuevo_label()
+                self.cuadruplo.add_by_pass_jump(bypass)
+                salto = self.cuadruplo.pop_jump()
+                self.cuadruplo.push_jump(bypass)
+                cuentaelse = self.cuadruplo.get_current_count()
+                self.cuadruplo.edit_Cuadruplo_by_label(salto,cuentaelse)
+
+                self.state = 238
                 self.cuerpo()
 
 
@@ -1816,23 +2011,39 @@ class PatitoParserParser ( Parser ):
     def ciclo(self):
 
         localctx = PatitoParserParser.CicloContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 48, self.RULE_ciclo)
+        self.enterRule(localctx, 52, self.RULE_ciclo)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 212
+            self.state = 241
             self.match(PatitoParserParser.MIENTRAS)
-            self.state = 213
+            self.state = 242
             self.match(PatitoParserParser.LPAREN)
-            self.state = 214
+            self.state = 243
             self.expresion()
-            self.state = 215
+            self.state = 244
             self.match(PatitoParserParser.RPAREN)
-            self.state = 216
+            self.state = 245
             self.match(PatitoParserParser.HAZ)
-            self.state = 217
+
+            falso = self.cuadruplo.nuevo_label()
+            op = self.cuadruplo.peek_operating()
+            cicloInd = self.cuadruplo.get_current_count()
+            self.cuadruplo.add_conditional_jump(op,falso)
+            self.cuadruplo.push_jump(falso)
+            self.cuadruplo.push_jump(cicloInd)
+
+            self.state = 247
             self.cuerpo()
-            self.state = 218
+            self.state = 248
             self.match(PatitoParserParser.SEMI)
+
+            op = self.cuadruplo.pop_operating()
+            salto = self.cuadruplo.pop_jump()
+            self.cuadruplo.add_cycle_jump(op,salto)
+            cuentafinal = self.cuadruplo.get_current_count()
+            salto = self.cuadruplo.pop_jump()
+            self.cuadruplo.edit_Cuadruplo_by_label(salto,cuentafinal) 
+
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1882,18 +2093,18 @@ class PatitoParserParser ( Parser ):
     def llamada(self):
 
         localctx = PatitoParserParser.LlamadaContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 50, self.RULE_llamada)
+        self.enterRule(localctx, 54, self.RULE_llamada)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 220
+            self.state = 251
             self.match(PatitoParserParser.ID)
-            self.state = 221
+            self.state = 252
             self.match(PatitoParserParser.LPAREN)
-            self.state = 222
+            self.state = 253
             self.complemento_llamada()
-            self.state = 223
+            self.state = 254
             self.match(PatitoParserParser.RPAREN)
-            self.state = 224
+            self.state = 255
             self.match(PatitoParserParser.SEMI)
         except RecognitionException as re:
             localctx.exception = re
@@ -1932,15 +2143,15 @@ class PatitoParserParser ( Parser ):
     def complemento_llamada(self):
 
         localctx = PatitoParserParser.Complemento_llamadaContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 52, self.RULE_complemento_llamada)
+        self.enterRule(localctx, 56, self.RULE_complemento_llamada)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 227
+            self.state = 258
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if (((_la) & ~0x3f) == 0 and ((1 << _la) & 100925466) != 0):
-                self.state = 226
+                self.state = 257
                 self.tiene_expresion()
 
 
@@ -1988,24 +2199,24 @@ class PatitoParserParser ( Parser ):
     def tiene_expresion(self):
 
         localctx = PatitoParserParser.Tiene_expresionContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 54, self.RULE_tiene_expresion)
+        self.enterRule(localctx, 58, self.RULE_tiene_expresion)
         try:
-            self.state = 234
+            self.state = 265
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,17,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,18,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 229
+                self.state = 260
                 self.expresion()
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 230
+                self.state = 261
                 self.expresion()
-                self.state = 231
+                self.state = 262
                 self.match(PatitoParserParser.COMMA)
-                self.state = 232
+                self.state = 263
                 self.tiene_expresion()
                 pass
 
@@ -2059,18 +2270,18 @@ class PatitoParserParser ( Parser ):
     def imprime(self):
 
         localctx = PatitoParserParser.ImprimeContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 56, self.RULE_imprime)
+        self.enterRule(localctx, 60, self.RULE_imprime)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 236
+            self.state = 267
             self.match(PatitoParserParser.ESCRIBE)
-            self.state = 237
+            self.state = 268
             self.match(PatitoParserParser.LPAREN)
-            self.state = 238
+            self.state = 269
             self.complemento_imprime()
-            self.state = 239
+            self.state = 270
             self.match(PatitoParserParser.RPAREN)
-            self.state = 240
+            self.state = 271
             self.match(PatitoParserParser.SEMI)
         except RecognitionException as re:
             localctx.exception = re
@@ -2087,20 +2298,19 @@ class PatitoParserParser ( Parser ):
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
+            self._expresion = None # ExpresionContext
+            self._CTE_LETRERO = None # Token
 
         def expresion(self):
             return self.getTypedRuleContext(PatitoParserParser.ExpresionContext,0)
 
 
+        def complemento_imprime_aux(self):
+            return self.getTypedRuleContext(PatitoParserParser.Complemento_imprime_auxContext,0)
+
+
         def CTE_LETRERO(self):
             return self.getToken(PatitoParserParser.CTE_LETRERO, 0)
-
-        def COMMA(self):
-            return self.getToken(PatitoParserParser.COMMA, 0)
-
-        def complemento_imprime(self):
-            return self.getTypedRuleContext(PatitoParserParser.Complemento_imprimeContext,0)
-
 
         def getRuleIndex(self):
             return PatitoParserParser.RULE_complemento_imprime
@@ -2119,43 +2329,97 @@ class PatitoParserParser ( Parser ):
     def complemento_imprime(self):
 
         localctx = PatitoParserParser.Complemento_imprimeContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 58, self.RULE_complemento_imprime)
+        self.enterRule(localctx, 62, self.RULE_complemento_imprime)
         try:
-            self.state = 251
+            self.state = 280
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,18,self._ctx)
-            if la_ == 1:
+            token = self._input.LA(1)
+            if token in [1, 3, 4, 18, 25, 26]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 242
-                self.expresion()
-                pass
+                self.state = 273
+                localctx._expresion = self.expresion()
 
-            elif la_ == 2:
+                val = (None if localctx._expresion is None else self._input.getText(localctx._expresion.start,localctx._expresion.stop))
+                self.cuadruplo.add_print_Cuadruplo(val)
+
+                self.state = 275
+                self.complemento_imprime_aux()
+                pass
+            elif token in [2]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 243
-                self.match(PatitoParserParser.CTE_LETRERO)
-                pass
+                self.state = 277
+                localctx._CTE_LETRERO = self.match(PatitoParserParser.CTE_LETRERO)
 
-            elif la_ == 3:
-                self.enterOuterAlt(localctx, 3)
-                self.state = 244
-                self.expresion()
-                self.state = 245
-                self.match(PatitoParserParser.COMMA)
-                self.state = 246
-                self.complemento_imprime()
-                pass
+                val = (None if localctx._CTE_LETRERO is None else localctx._CTE_LETRERO.text)
+                self.cuadruplo.add_print_Cuadruplo(val)
 
-            elif la_ == 4:
-                self.enterOuterAlt(localctx, 4)
-                self.state = 248
-                self.match(PatitoParserParser.CTE_LETRERO)
-                self.state = 249
-                self.match(PatitoParserParser.COMMA)
-                self.state = 250
-                self.complemento_imprime()
+                self.state = 279
+                self.complemento_imprime_aux()
                 pass
+            else:
+                raise NoViableAltException(self)
 
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class Complemento_imprime_auxContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def COMMA(self, i:int=None):
+            if i is None:
+                return self.getTokens(PatitoParserParser.COMMA)
+            else:
+                return self.getToken(PatitoParserParser.COMMA, i)
+
+        def complemento_imprime(self, i:int=None):
+            if i is None:
+                return self.getTypedRuleContexts(PatitoParserParser.Complemento_imprimeContext)
+            else:
+                return self.getTypedRuleContext(PatitoParserParser.Complemento_imprimeContext,i)
+
+
+        def getRuleIndex(self):
+            return PatitoParserParser.RULE_complemento_imprime_aux
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterComplemento_imprime_aux" ):
+                listener.enterComplemento_imprime_aux(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitComplemento_imprime_aux" ):
+                listener.exitComplemento_imprime_aux(self)
+
+
+
+
+    def complemento_imprime_aux(self):
+
+        localctx = PatitoParserParser.Complemento_imprime_auxContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 64, self.RULE_complemento_imprime_aux)
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 286
+            self._errHandler.sync(self)
+            _alt = self._interp.adaptivePredict(self._input,20,self._ctx)
+            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
+                if _alt==1:
+                    self.state = 282
+                    self.match(PatitoParserParser.COMMA)
+                    self.state = 283
+                    self.complemento_imprime() 
+                self.state = 288
+                self._errHandler.sync(self)
+                _alt = self._interp.adaptivePredict(self._input,20,self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re

@@ -1,0 +1,8 @@
+programa &Beto;
+vars &A,&B,&C,&D,&E : entero;
+
+inicio
+{
+    &A = &B+&C+&D*&E;
+}
+fin;

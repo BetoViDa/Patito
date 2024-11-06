@@ -12,6 +12,7 @@ class TablaVar:
         else:
             raise ValueError(f"'{nombre}' Ya definido.")
 
+
     def buscar_var(self, nombre):
         return nombre in self.tabla
 
@@ -46,3 +47,9 @@ class Dirfuncion:
 
     def buscar_funcion(self, nombre):
         return nombre in self.funciones
+    
+    def editarVal_nombre(self,llave,valor):
+        if self.tabla.buscar_var(llave):
+            self.tabla[llave] = valor
+        else:
+            raise ValueError("Error de Actualizacion")

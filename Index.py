@@ -3,6 +3,7 @@ from antlr4 import *
 from PatitoLexer import PatitoLexer
 from PatitoParserParser import PatitoParserParser
 from Semantica import Dirfuncion
+from cuadruplos import Cuadruplotabla
 
 def main(input_file):
     # Leer el archivo de entrada
@@ -16,7 +17,10 @@ def main(input_file):
     parser = PatitoParserParser(stream)
     
     funciones = Dirfuncion()
+    cuadruplo = Cuadruplotabla()
+    
     parser.funcdir = funciones
+    parser.cuadruplo = cuadruplo
     
     # Parsear la entrada según la regla 'programa'
     tree = parser.programa()
@@ -27,6 +31,9 @@ def main(input_file):
     print("Árbol de parseo:")
     print(tree.toStringTree(recog=parser))
     funciones.get_dir()
+    print("\n")
+    print("Cuadruplos")
+    cuadruplo.print_Cuadruplo_tabla()
     
 if __name__ == "__main__":
     if len(sys.argv) < 2:

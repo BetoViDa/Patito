@@ -134,6 +134,15 @@ class PatitoParserListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by PatitoParserParser#exp_logicas.
+    def enterExp_logicas(self, ctx:PatitoParserParser.Exp_logicasContext):
+        pass
+
+    # Exit a parse tree produced by PatitoParserParser#exp_logicas.
+    def exitExp_logicas(self, ctx:PatitoParserParser.Exp_logicasContext):
+        pass
+
+
     # Enter a parse tree produced by PatitoParserParser#exp.
     def enterExp(self, ctx:PatitoParserParser.ExpContext):
         pass
@@ -143,12 +152,12 @@ class PatitoParserListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by PatitoParserParser#complemento_exp.
-    def enterComplemento_exp(self, ctx:PatitoParserParser.Complemento_expContext):
+    # Enter a parse tree produced by PatitoParserParser#exp_signo.
+    def enterExp_signo(self, ctx:PatitoParserParser.Exp_signoContext):
         pass
 
-    # Exit a parse tree produced by PatitoParserParser#complemento_exp.
-    def exitComplemento_exp(self, ctx:PatitoParserParser.Complemento_expContext):
+    # Exit a parse tree produced by PatitoParserParser#exp_signo.
+    def exitExp_signo(self, ctx:PatitoParserParser.Exp_signoContext):
         pass
 
 
@@ -161,12 +170,12 @@ class PatitoParserListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by PatitoParserParser#complemento_termino.
-    def enterComplemento_termino(self, ctx:PatitoParserParser.Complemento_terminoContext):
+    # Enter a parse tree produced by PatitoParserParser#term_signo.
+    def enterTerm_signo(self, ctx:PatitoParserParser.Term_signoContext):
         pass
 
-    # Exit a parse tree produced by PatitoParserParser#complemento_termino.
-    def exitComplemento_termino(self, ctx:PatitoParserParser.Complemento_terminoContext):
+    # Exit a parse tree produced by PatitoParserParser#term_signo.
+    def exitTerm_signo(self, ctx:PatitoParserParser.Term_signoContext):
         pass
 
 
@@ -176,6 +185,15 @@ class PatitoParserListener(ParseTreeListener):
 
     # Exit a parse tree produced by PatitoParserParser#factor.
     def exitFactor(self, ctx:PatitoParserParser.FactorContext):
+        pass
+
+
+    # Enter a parse tree produced by PatitoParserParser#factor_operaciones.
+    def enterFactor_operaciones(self, ctx:PatitoParserParser.Factor_operacionesContext):
+        pass
+
+    # Exit a parse tree produced by PatitoParserParser#factor_operaciones.
+    def exitFactor_operaciones(self, ctx:PatitoParserParser.Factor_operacionesContext):
         pass
 
 
@@ -275,6 +293,15 @@ class PatitoParserListener(ParseTreeListener):
 
     # Exit a parse tree produced by PatitoParserParser#complemento_imprime.
     def exitComplemento_imprime(self, ctx:PatitoParserParser.Complemento_imprimeContext):
+        pass
+
+
+    # Enter a parse tree produced by PatitoParserParser#complemento_imprime_aux.
+    def enterComplemento_imprime_aux(self, ctx:PatitoParserParser.Complemento_imprime_auxContext):
+        pass
+
+    # Exit a parse tree produced by PatitoParserParser#complemento_imprime_aux.
+    def exitComplemento_imprime_aux(self, ctx:PatitoParserParser.Complemento_imprime_auxContext):
         pass
 
 
