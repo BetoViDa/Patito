@@ -1,6 +1,7 @@
 # CuboSemantico.py
 CuboSemantico = {
     "+": {
+        "codigo": 0,
         "entero": {
             "entero": "entero",
             "flotante": "flotante",
@@ -11,6 +12,7 @@ CuboSemantico = {
         }
     },
     "-": {
+        "codigo": 1,
         "entero": {
             "entero": "entero",
             "flotante": "flotante",
@@ -21,6 +23,7 @@ CuboSemantico = {
         }
     },
     "*": {
+        "codigo": 2,
         "entero": {
             "entero": "entero",
             "flotante": "flotante",
@@ -31,6 +34,7 @@ CuboSemantico = {
         }
     },
     "/": {
+        "codigo": 3,
         "entero": {
             "entero": "entero",
             "flotante": "flotante",
@@ -41,6 +45,7 @@ CuboSemantico = {
         }
     },
     ">": {
+        "codigo": 4,
         "entero": {
             "entero": "entero",
             "flotante": "entero",
@@ -51,6 +56,7 @@ CuboSemantico = {
         }
     },
     "<": {
+        "codigo": 5,
         "entero": {
             "entero": "entero",
             "flotante": "entero",
@@ -61,6 +67,7 @@ CuboSemantico = {
         }
     },
     "!=": {
+        "codigo": 6,
         "entero": {
             "entero": "entero",
             "flotante": "entero",
@@ -71,6 +78,7 @@ CuboSemantico = {
         }
     },
     "==": {
+        "codigo": 7,
         "entero": {
             "entero": "entero",
             "flotante": "entero",
@@ -81,6 +89,7 @@ CuboSemantico = {
         }
     },
     "=": {
+        "codigo": 8,
         "entero": {
             "entero": "entero",
             "flotante": "entero",

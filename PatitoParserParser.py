@@ -2339,7 +2339,8 @@ class PatitoParserParser ( Parser ):
                 self.expresion()
 
                 val = self.cuadruplo.pop_operating()
-                self.cuadruplo.add_print_Cuadruplo(val)
+                add = self.funcdir.funciones[self.nombrefuncion].tabla.get_dir(val)
+                self.cuadruplo.add_print_Cuadruplo(add)
 
                 self.state = 275
                 self.complemento_imprime_aux()
@@ -2349,8 +2350,9 @@ class PatitoParserParser ( Parser ):
                 self.state = 277
                 localctx._CTE_LETRERO = self.match(PatitoParserParser.CTE_LETRERO)
 
-                val = (None if localctx._CTE_LETRERO is None else localctx._CTE_LETRERO.text)
-                self.cuadruplo.add_print_Cuadruplo(val)
+                val = self.funcdir.funciones[self.nombrefuncion].tabla.add_constant(localctx._CTE_LETRERO,"letrero")
+                add = self.funcdir.funciones[self.nombrefuncion].tabla.get_dir(val)
+                self.cuadruplo.add_print_Cuadruplo(add)
 
                 self.state = 279
                 self.complemento_imprime_aux()

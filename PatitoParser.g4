@@ -177,10 +177,12 @@ imprime : ESCRIBE LPAREN complemento_imprime RPAREN SEMI ;
 complemento_imprime : expresion
 {
 val = self.cuadruplo.pop_operating()
-self.cuadruplo.add_print_Cuadruplo(val)
+add = self.funcdir.funciones[self.nombrefuncion].tabla.get_dir(val)
+self.cuadruplo.add_print_Cuadruplo(add)
 } complemento_imprime_aux | CTE_LETRERO
 {
-val = $CTE_LETRERO.text
-self.cuadruplo.add_print_Cuadruplo(val)
+val = self.funcdir.funciones[self.nombrefuncion].tabla.add_constant($CTE_LETRERO,"letrero")
+add = self.funcdir.funciones[self.nombrefuncion].tabla.get_dir(val)
+self.cuadruplo.add_print_Cuadruplo(add)
 } complemento_imprime_aux;
 complemento_imprime_aux : ( COMMA complemento_imprime)*;

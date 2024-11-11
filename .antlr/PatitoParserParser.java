@@ -1839,7 +1839,8 @@ public class PatitoParserParser extends Parser {
 				expresion();
 
 				val = self.cuadruplo.pop_operating()
-				self.cuadruplo.add_print_Cuadruplo(val)
+				add = self.funcdir.funciones[self.nombrefuncion].tabla.get_dir(val)
+				self.cuadruplo.add_print_Cuadruplo(add)
 
 				setState(275);
 				complemento_imprime_aux();
@@ -1851,8 +1852,9 @@ public class PatitoParserParser extends Parser {
 				setState(277);
 				((Complemento_imprimeContext)_localctx).CTE_LETRERO = match(CTE_LETRERO);
 
-				val = (((Complemento_imprimeContext)_localctx).CTE_LETRERO!=null?((Complemento_imprimeContext)_localctx).CTE_LETRERO.getText():null)
-				self.cuadruplo.add_print_Cuadruplo(val)
+				val = self.funcdir.funciones[self.nombrefuncion].tabla.add_constant(((Complemento_imprimeContext)_localctx).CTE_LETRERO,"letrero")
+				add = self.funcdir.funciones[self.nombrefuncion].tabla.get_dir(val)
+				self.cuadruplo.add_print_Cuadruplo(add)
 
 				setState(279);
 				complemento_imprime_aux();
