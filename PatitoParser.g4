@@ -176,7 +176,7 @@ tiene_expresion : expresion | expresion COMMA tiene_expresion;
 imprime : ESCRIBE LPAREN complemento_imprime RPAREN SEMI ;
 complemento_imprime : expresion
 {
-val = $expresion.text
+val = self.cuadruplo.pop_operating()
 self.cuadruplo.add_print_Cuadruplo(val)
 } complemento_imprime_aux | CTE_LETRERO
 {

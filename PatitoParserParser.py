@@ -2298,7 +2298,6 @@ class PatitoParserParser ( Parser ):
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self._expresion = None # ExpresionContext
             self._CTE_LETRERO = None # Token
 
         def expresion(self):
@@ -2337,9 +2336,9 @@ class PatitoParserParser ( Parser ):
             if token in [1, 3, 4, 18, 25, 26]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 273
-                localctx._expresion = self.expresion()
+                self.expresion()
 
-                val = (None if localctx._expresion is None else self._input.getText(localctx._expresion.start,localctx._expresion.stop))
+                val = self.cuadruplo.pop_operating()
                 self.cuadruplo.add_print_Cuadruplo(val)
 
                 self.state = 275

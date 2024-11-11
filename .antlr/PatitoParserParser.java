@@ -1806,7 +1806,6 @@ public class PatitoParserParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class Complemento_imprimeContext extends ParserRuleContext {
-		public ExpresionContext expresion;
 		public Token CTE_LETRERO;
 		public ExpresionContext expresion() {
 			return getRuleContext(ExpresionContext.class,0);
@@ -1837,9 +1836,9 @@ public class PatitoParserParser extends Parser {
 				enterOuterAlt(_localctx, 1);
 				{
 				setState(273);
-				((Complemento_imprimeContext)_localctx).expresion = expresion();
+				expresion();
 
-				val = (((Complemento_imprimeContext)_localctx).expresion!=null?_input.getText(((Complemento_imprimeContext)_localctx).expresion.start,((Complemento_imprimeContext)_localctx).expresion.stop):null)
+				val = self.cuadruplo.pop_operating()
 				self.cuadruplo.add_print_Cuadruplo(val)
 
 				setState(275);
