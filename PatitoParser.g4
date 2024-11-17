@@ -9,7 +9,11 @@ programa :
 {
 self.nombrefuncion = $ID.text
 self.funcdir.add_funcion($ID.text,"programa")
-} SEMI tiene_variables tiene_funciones INICIO cuerpo FIN;
+} SEMI tiene_variables tiene_funciones INICIO cuerpo FIN
+{
+self.cuadruplo.add_end_Cuadruplo()
+tablaConst = self.funcdir.funciones[self.nombrefuncion]["constante_tabla"].get_tabla()
+};
 
 tiene_variables : vars?;
 tiene_funciones : funcs*;
@@ -20,7 +24,7 @@ partes = $complemento_vars.text.split(":")
 variables_separadas = partes[0].split(",")
 tipo = partes[1] 
 for variable in variables_separadas: 
-    self.funcdir.funciones[self.nombrefuncion]["tabla"].add_var(variable,tipo)
+    self.funcdir.funciones[self.nombrefuncion]["tabla_var"].add_var(variable,tipo)
 } SEMI )+ ;
 
 complemento_vars  : ID (COMMA ID)* COLON tipo   ;
@@ -37,7 +41,7 @@ for argumento in argumentos:
     arg_div = argumento.split(":")
     variable = arg_div[0]
     tipo = arg_div[1]
-    self.funcdir.funciones[self.nombrefuncion]["tabla"].add_var(variable,tipo)
+    self.funcdir.funciones[self.nombrefuncion]["tabla_var"].add_var(variable,tipo)
 } RPAREN LBRACE tiene_variables cuerpo RBRACE SEMI ;
 
 complemento_funcs : (ID COLON tipo)? | (ID COLON tipo COMMA complemento_funcs)?;
@@ -59,7 +63,7 @@ temp = self.cuadruplo.nuevo_temp()
 operador = self.cuadruplo.pop_operator()
 op2 = self.cuadruplo.pop_operating()
 op1 = self.cuadruplo.pop_operating()
-tempadd = self.funcdir.funciones[self.nombrefuncion]["tabla"].add_var(temp,"temp")
+tempadd = self.funcdir.funciones[self.nombrefuncion]["tabla_var"].add_var(temp,"temp")
 self.cuadruplo.add_Cuadruplo(operador,op1,op2,temp)
 self.cuadruplo.push_operating(temp)
 } )? ;
@@ -86,7 +90,7 @@ temp = self.cuadruplo.nuevo_temp();
 operador = self.cuadruplo.pop_operator();
 op2 = self.cuadruplo.pop_operating();
 op1 = self.cuadruplo.pop_operating();
-tempadd = self.funcdir.funciones[self.nombrefuncion]["tabla"].add_var(temp, "temp");
+tempadd = self.funcdir.funciones[self.nombrefuncion]["tabla_var"].add_var(temp, "temp");
 self.cuadruplo.add_Cuadruplo(operador, op1, op2, temp);
 self.cuadruplo.push_operating(temp);
 }
@@ -102,7 +106,7 @@ temp = self.cuadruplo.nuevo_temp();
 operador = self.cuadruplo.pop_operator();
 op2 = self.cuadruplo.pop_operating();
 op1 = self.cuadruplo.pop_operating();
-tempadd = self.funcdir.funciones[self.nombrefuncion]["tabla"].add_var(temp, "temp");
+tempadd = self.funcdir.funciones[self.nombrefuncion]["tabla_var"].add_var(temp, "temp");
 self.cuadruplo.add_Cuadruplo(operador, op1, op2, temp);
 self.cuadruplo.push_operating(temp);
 }
@@ -117,12 +121,12 @@ self.cuadruplo.push_operating($factor_operaciones.text)
 factor_operaciones: tiene_signo tiene_var
 {
 val = $tiene_var.text
-llave = self.funcdir.funciones[self.nombrefuncion]["tabla"].buscar_var(val)
+llave = self.funcdir.funciones[self.nombrefuncion]["tabla_var"].buscar_var(val)
 } ;
 tiene_signo : ( PLUS | MINUS )? ;
 tiene_var : ID
 {
-if not self.funcdir.funciones[self.nombrefuncion]["tabla"].buscar_var($ID.text):
+if not self.funcdir.funciones[self.nombrefuncion]["tabla_var"].buscar_var($ID.text):
     raise Exception(f"Varible {$ID.text} no declarada")
 } | cte ;
 

@@ -8,6 +8,9 @@ class Cuadruplo:
     def __str__(self):
         return f"\t{self.op}\t|\t{self.arg1}\t|\t{self.arg2}\t|\t{self.res}"
 
+    def __strsf__(self):
+        return f"{self.op},{self.arg1},{self.arg2},{self.res}"
+
 
 class Cuadruplotabla:
     def __init__(self):
@@ -39,6 +42,9 @@ class Cuadruplotabla:
         cuadruplo = Cuadruplo(op, arg1, "", res)
         self.Cuadruplo.append(cuadruplo)
         self.global_count += 1
+        
+    def add_end_Cuadruplo(self):
+        self.add_Cuadruplo(12,"","","")
 
     def push_operator(self, operator):
         self.operators_pile.append(operator)
@@ -84,16 +90,16 @@ class Cuadruplotabla:
         return self.jump_pile[-1] if self.jump_pile else None
 
     def add_by_pass_jump(self, label):
-        self.add_Cuadruplo("GOTO", "", "", label)
+        self.add_Cuadruplo(12, "", "", label)
 
     def add_conditional_jump(self, condition, label):
-        self.add_Cuadruplo("GOTOF", condition, "", label)
+        self.add_Cuadruplo(10, condition, "", label)
 
     def add_cycle_jump(self, condition, label):
-        self.add_Cuadruplo("GOTOT", condition, "", label)
+        self.add_Cuadruplo(11, condition, "", label)
 
     def add_print_Cuadruplo(self, arg):
-        self.add_Cuadruplo("PRINT", "", "", arg)
+        self.add_Cuadruplo(9, "", "", arg)
 
     def get_Cuadruplo_by_index(self, index):
         return self.Cuadruplo[index]
