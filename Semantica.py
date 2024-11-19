@@ -19,7 +19,7 @@ class TablaVar:
         if self.buscar_var(nombre):
             return self.tabla[nombre]["tipo"]
         else:
-            raise ValueError(f"Variable no definida")
+            raise ValueError(f"Variable no definida", nombre)
     
     def get_direccion(self,nombre):
         if self.buscar_var(nombre):

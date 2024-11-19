@@ -6,6 +6,6 @@ inicio
     &var2 = 1;
     escribe(&var1);
     escribe("hola patito");
-    escribe(&var1);
+    escribe(&var1 + 4);
 }
 fin;
