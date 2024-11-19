@@ -4,6 +4,7 @@ from PatitoLexer import PatitoLexer
 from PatitoParserParser import PatitoParserParser
 from Semantica import Dirfuncion
 from cuadruplos import Cuadruplotabla
+from CuboSemantico import CuboSemantico
 
 def main(input_file):
     # Leer el archivo de entrada
@@ -18,8 +19,10 @@ def main(input_file):
     
     funciones = Dirfuncion()
     cuadruplo = Cuadruplotabla()
+    semantic = CuboSemantico
     
     parser.funcdir = funciones
+    parser.semantic = semantic
     parser.cuadruplo = cuadruplo
     
     # Parsear la entrada según la regla 'programa'

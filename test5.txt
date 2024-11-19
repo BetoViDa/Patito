@@ -15,6 +15,7 @@ inicio
     }sino{
         &A = &D - &C + &B;
         escribe("el resultado es", &A);
+        escribe(&B)
     };   
 }
 fin;

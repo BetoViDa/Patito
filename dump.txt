@@ -12,14 +12,12 @@ class TablaVar:
         else:
             raise ValueError(f"'{nombre}' Ya definido.")
         
-    def add_constante(self,nombre,tipo,direccion):
-        self.tabla[direccion] = {"nombre":nombre,"tipo":tipo,"direccion":direccion}
-
+        
     def get_tipo(self,nombre):
         if self.buscar_var(nombre):
             return self.tabla[nombre]["tipo"]
         else:
-            raise ValueError(f"Variable no definida")
+            return False
     
     def get_direccion(self,nombre):
         if self.buscar_var(nombre):
@@ -29,7 +27,7 @@ class TablaVar:
             if direccion :
                 return direccion["direccion"]
             else:
-                raise ValueError("Error en get direccion")
+                return False
             
     def encontrar_por_nombre(self,nombre):
         return next((item for item in self.tabla.values() if item["nombre"] == nombre), None)
@@ -41,7 +39,69 @@ class TablaVar:
         else:
             raise ValueError(f"Error en editar por direccion")
     
+    def editar_llave(self,llave,nueva):
+        if self.buscar_var(llave):
+            val = self.tabla[llave]
+            val["nombre"] = nueva
+            self.tabla[nueva] = val
+            del self.tabla[llave]
+        else:
+            raise ValueError("Error en editar llave")
+    
     def buscar_var(self, nombre):
+        return nombre in self.tabla
+
+class TablaCon:
+    def __init__(self):  
+        self.tabla = {}
+
+    def get_tabla_constante(self):
+        return self.tabla
+
+    def add_constante(self, nombre, tipo,direccion):
+        if not self.buscar_constante(nombre):
+            self.tabla[nombre] = {"nombre":nombre,"tipo":tipo,"direccion":direccion}
+            return True
+        else:
+            raise ValueError(f"'{nombre}' Ya definido. Constantes")
+        
+        
+    def get_tipo_constante(self,nombre):
+        if self.buscar_constante(nombre):
+            return self.tabla[nombre]["tipo"]
+        else:
+            raise ValueError(f"Constante no definida")
+    
+    def get_direccion_constante(self,nombre):
+        if self.buscar_constante(nombre):
+            return self.tabla[nombre]["direccion"]
+        else:
+            direccion = self.encontrar_por_nombre_constante(nombre)
+            if direccion :
+                return direccion["direccion"]
+            else:
+                raise ValueError(f"Error en get direccion constante",nombre)
+            
+    def encontrar_por_nombre_constante(self,nombre):
+        return next((item for item in self.tabla.values() if item["nombre"] == nombre), None)
+
+    def editar_val_por_direccion_constante(self,direccion,valor):
+        val = next((item for item in self.tabla.values() if item["direccion"] == direccion), False)
+        if val:
+            self.tabla[val["nombre"]]["nombre"] = valor
+        else:
+            raise ValueError(f"Error en editar por direccion constantes")
+    
+    def editar_llave_constante(self,llave,nueva):
+        if self.buscar_constante(llave):
+            val = self.tabla[llave]
+            val["nombre"] = nueva
+            self.tabla[nueva] = val
+            del self.tabla[llave]
+        else:
+            raise ValueError("Error en editar llave constantes")
+    
+    def buscar_constante(self, nombre):
         return nombre in self.tabla
 
 
@@ -53,6 +113,7 @@ class Dirfuncion:
         if self.funciones != {}:
             for func_nombre, func_info in self.funciones.items():
                 tabla = func_info["tabla"].get_tabla()
+                
                 print(f"Funcion: {func_nombre}")
                 print(f"Tipo: {func_info['tipo']}")
                 print(
@@ -83,3 +144,8 @@ class Dirfuncion:
             self.tabla[llave] = valor
         else:
             raise ValueError("Error de Actualizacion")
+
+
+
+
+            

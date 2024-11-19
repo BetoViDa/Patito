@@ -220,6 +220,11 @@ class PatitoParserParser ( Parser ):
 
 
 
+    contadorentero = 1000
+    contadorflotante = 2000
+    contadorconstante = 3000
+
+
 
     class ProgramaContext(ParserRuleContext):
         __slots__ = 'parser'
@@ -464,9 +469,19 @@ class PatitoParserParser ( Parser ):
 
                 partes = (None if localctx._complemento_vars is None else self._input.getText(localctx._complemento_vars.start,localctx._complemento_vars.stop)).split(":")  
                 variables_separadas = partes[0].split(",")
-                tipo = partes[1] 
+                tipo = partes[1]
+
                 for variable in variables_separadas: 
-                    self.funcdir.funciones[self.nombrefuncion]["tabla"].add_var(variable,tipo)
+                    if tipo == "entero":
+                        direccion = self.contadorentero
+                        self.funcdir.funciones[self.nombrefuncion]["tabla"].add_var(variable,tipo,direccion)
+                        self.contadorentero = self.contadorentero + 1
+                    elif tipo == "flotante":
+                        direccion = self.contadorflotante
+                        self.funcdir.funciones[self.nombrefuncion]["tabla"].add_var(variable,tipo,direccion)
+                        self.contadorflotante = self.contadorflotante + 1
+                    else:
+                        raise ValueError(f"Variable no identificada")
 
                 self.state = 88
                 self.match(PatitoParserParser.SEMI)
@@ -689,7 +704,16 @@ class PatitoParserParser ( Parser ):
                 arg_div = argumento.split(":")
                 variable = arg_div[0]
                 tipo = arg_div[1]
-                self.funcdir.funciones[self.nombrefuncion]["tabla"].add_var(variable,tipo)
+                if tipo == "entero":
+                    direccion = self.contadorentero
+                    self.funcdir.funciones[self.nombrefuncion]["tabla"].add_var(variable,tipo,direccion)
+                    self.contadorentero = self.contadorentero + 1
+                elif tipo == "flotante":
+                    direccion = self.contadorflotante
+                    self.funcdir.funciones[self.nombrefuncion]["tabla"].add_var(variable,tipo,direccion)
+                    self.contadorflotante = self.contadorflotante + 1
+                else:
+                    raise ValueError(f"Variable no identificada")
 
             self.state = 113
             self.match(PatitoParserParser.RPAREN)
@@ -1051,7 +1075,7 @@ class PatitoParserParser ( Parser ):
 
             asignar = (None if localctx._ID is None else localctx._ID.text)
             op = self.cuadruplo.pop_operating()
-            self.cuadruplo.add_assign_Cuadruplo("=",op,asignar)
+            self.cuadruplo.add_assign_Cuadruplo(self.semantic["="]["codigo"],op,asignar)
 
             self.state = 155
             self.match(PatitoParserParser.SEMI)
@@ -1161,8 +1185,10 @@ class PatitoParserParser ( Parser ):
                 operador = self.cuadruplo.pop_operator()
                 op2 = self.cuadruplo.pop_operating()
                 op1 = self.cuadruplo.pop_operating()
-                tempadd = self.funcdir.funciones[self.nombrefuncion]["tabla"].add_var(temp,"temp")
-                self.cuadruplo.add_Cuadruplo(operador,op1,op2,temp)
+                direccion = self.contadorconstante
+                tempadd = self.funcdir.funciones[self.nombrefuncion]["tabla"].add_constante(temp,"temp",direccion)
+                self.contadorconstante = direccion + 1
+                self.cuadruplo.add_Cuadruplo(self.semantic[operador]["codigo"],op1,op2,temp)
                 self.cuadruplo.push_operating(temp)
 
 
@@ -1322,8 +1348,10 @@ class PatitoParserParser ( Parser ):
                 operador = self.cuadruplo.pop_operator();
                 op2 = self.cuadruplo.pop_operating();
                 op1 = self.cuadruplo.pop_operating();
-                tempadd = self.funcdir.funciones[self.nombrefuncion]["tabla"].add_var(temp, "temp");
-                self.cuadruplo.add_Cuadruplo(operador, op1, op2, temp);
+                direccion = self.contadorconstante
+                tempadd = self.funcdir.funciones[self.nombrefuncion]["tabla"].add_constante(temp,"temp",direccion)
+                self.contadorconstante = direccion + 1
+                self.cuadruplo.add_Cuadruplo(self.semantic[operador]["codigo"], op1, op2, temp);
                 self.cuadruplo.push_operating(temp);
 
                 self.state = 186
@@ -1450,8 +1478,10 @@ class PatitoParserParser ( Parser ):
                 operador = self.cuadruplo.pop_operator();
                 op2 = self.cuadruplo.pop_operating();
                 op1 = self.cuadruplo.pop_operating();
-                tempadd = self.funcdir.funciones[self.nombrefuncion]["tabla"].add_var(temp, "temp");
-                self.cuadruplo.add_Cuadruplo(operador, op1, op2, temp);
+                direccion = self.contadorconstante
+                tempadd = self.funcdir.funciones[self.nombrefuncion]["tabla"].add_constante(temp,"temp",direccion)
+                self.contadorconstante = direccion + 1
+                self.cuadruplo.add_Cuadruplo(self.semantic[operador]["codigo"], op1, op2, temp);
                 self.cuadruplo.push_operating(temp);
 
                 self.state = 199
@@ -2339,7 +2369,7 @@ class PatitoParserParser ( Parser ):
                 self.expresion()
 
                 val = self.cuadruplo.pop_operating()
-                add = self.funcdir.funciones[self.nombrefuncion].tabla.get_dir(val)
+                add = self.funcdir.funciones[self.nombrefuncion]["tabla"].get_direccion(val)
                 self.cuadruplo.add_print_Cuadruplo(add)
 
                 self.state = 275
@@ -2350,8 +2380,10 @@ class PatitoParserParser ( Parser ):
                 self.state = 277
                 localctx._CTE_LETRERO = self.match(PatitoParserParser.CTE_LETRERO)
 
-                val = self.funcdir.funciones[self.nombrefuncion].tabla.add_constant(localctx._CTE_LETRERO,"letrero")
-                add = self.funcdir.funciones[self.nombrefuncion].tabla.get_dir(val)
+                direccion = self.contadorconstante
+                val = self.funcdir.funciones[self.nombrefuncion]["tabla"].add_constante(localctx._CTE_LETRERO,"letrero",direccion)
+                self.contadorconstante = direccion + 1
+                add = self.funcdir.funciones[self.nombrefuncion]["tabla"].get_direccion(direccion)
                 self.cuadruplo.add_print_Cuadruplo(add)
 
                 self.state = 279

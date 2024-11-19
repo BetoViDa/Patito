@@ -4,5 +4,6 @@ vars &A,&B,&C,&D,&E : entero;
 inicio
 {
     &A = &B+&C+&D*&E;
+    escribe(&A + 4)
 }
 fin;
