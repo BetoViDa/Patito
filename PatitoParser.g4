@@ -72,8 +72,10 @@ estatuto : asigna | condicion | ciclo | llamada | imprime;
 asigna : ID EQUAL expresion
 {
 asignar = $ID.text
+asignar_dir = self.funcdir.funciones[self.nombrefuncion]["tabla"].get_direccion(asignar)
 op = self.cuadruplo.pop_operating()
-self.cuadruplo.add_assign_Cuadruplo(self.semantic["="]["codigo"],op,asignar)
+op_dir = self.funcdir.funciones[self.nombrefuncion]["tabla"].get_direccion(op)
+self.cuadruplo.add_assign_Cuadruplo(self.semantic["="]["codigo"],op_dir,asignar_dir)
 } SEMI ;
 
 expresion : exp complemento_expresion;
@@ -82,12 +84,14 @@ complemento_expresion : (exp_logicas exp
 temp = self.cuadruplo.nuevo_temp()
 operador = self.cuadruplo.pop_operator()
 op2 = self.cuadruplo.pop_operating()
+op2_dir = self.funcdir.funciones[self.nombrefuncion]["tabla"].get_direccion(op2)
 op1 = self.cuadruplo.pop_operating()
+op1_dir = self.funcdir.funciones[self.nombrefuncion]["tabla"].get_direccion(op1)
 direccion = self.contadorconstante
 tempadd = self.funcdir.funciones[self.nombrefuncion]["tabla"].add_constante(temp,"temp",direccion)
 self.contadorconstante = direccion + 1
-self.cuadruplo.add_Cuadruplo(self.semantic[operador]["codigo"],op1,op2,temp)
-self.cuadruplo.push_operating(temp)
+self.cuadruplo.add_Cuadruplo(self.semantic[operador]["codigo"],op1_dir,op2_dir,direccion)
+self.cuadruplo.push_operating(direccion)
 } )? ;
 exp_logicas : GT
 {
@@ -108,15 +112,17 @@ exp : termino (exp_signo
 self.cuadruplo.push_operator($exp_signo.text);
 } termino 
 {
-temp = self.cuadruplo.nuevo_temp();
-operador = self.cuadruplo.pop_operator();
-op2 = self.cuadruplo.pop_operating();
-op1 = self.cuadruplo.pop_operating();
+temp = self.cuadruplo.nuevo_temp()
+operador = self.cuadruplo.pop_operator()
+op2 = self.cuadruplo.pop_operating()
+op2_dir = self.funcdir.funciones[self.nombrefuncion]["tabla"].get_direccion(op2)
+op1 = self.cuadruplo.pop_operating()
+op1_dir = self.funcdir.funciones[self.nombrefuncion]["tabla"].get_direccion(op1)
 direccion = self.contadorconstante
 tempadd = self.funcdir.funciones[self.nombrefuncion]["tabla"].add_constante(temp,"temp",direccion)
 self.contadorconstante = direccion + 1
-self.cuadruplo.add_Cuadruplo(self.semantic[operador]["codigo"], op1, op2, temp);
-self.cuadruplo.push_operating(temp);
+self.cuadruplo.add_Cuadruplo(self.semantic[operador]["codigo"],op1_dir,op2_dir,direccion)
+self.cuadruplo.push_operating(direccion)
 }
 )*;
 exp_signo: (PLUS | MINUS) ;
@@ -126,15 +132,17 @@ termino : factor (  term_signo
 self.cuadruplo.push_operator($term_signo.text);
 } factor 
 {
-temp = self.cuadruplo.nuevo_temp();
-operador = self.cuadruplo.pop_operator();
-op2 = self.cuadruplo.pop_operating();
-op1 = self.cuadruplo.pop_operating();
+temp = self.cuadruplo.nuevo_temp()
+operador = self.cuadruplo.pop_operator()
+op2 = self.cuadruplo.pop_operating()
+op2_dir = self.funcdir.funciones[self.nombrefuncion]["tabla"].get_direccion(op2)
+op1 = self.cuadruplo.pop_operating()
+op1_dir = self.funcdir.funciones[self.nombrefuncion]["tabla"].get_direccion(op1)
 direccion = self.contadorconstante
 tempadd = self.funcdir.funciones[self.nombrefuncion]["tabla"].add_constante(temp,"temp",direccion)
 self.contadorconstante = direccion + 1
-self.cuadruplo.add_Cuadruplo(self.semantic[operador]["codigo"], op1, op2, temp);
-self.cuadruplo.push_operating(temp);
+self.cuadruplo.add_Cuadruplo(self.semantic[operador]["codigo"],op1_dir,op2_dir,direccion)
+self.cuadruplo.push_operating(direccion)
 }
 )*;
 term_signo: (MUL | DIV);
@@ -144,19 +152,38 @@ factor : LPAREN expresion RPAREN | factor_operaciones
 {
 self.cuadruplo.push_operating($factor_operaciones.text)
 };
-factor_operaciones: tiene_signo tiene_var
+factor_operaciones: tiene_signo? tiene_var
 {
 val = $tiene_var.text
+signo = $tiene_signo.text
 llave = self.funcdir.funciones[self.nombrefuncion]["tabla"].buscar_var(val)
+val_dir = self.funcdir.funciones[self.nombrefuncion]["tabla"].get_direccion(val)
+if signo:
+    if signo == "-":
+        newval = signo + val
+        self.funcdir.funciones[self.nombrefuncion]["tabla"].editar_val_por_direccion(val_dir,newval)
+    else: 
+        newval = signo + val
+        self.funcdir.funciones[self.nombrefuncion]["tabla"].editar_val_por_direccion(val_dir,newval)
 } ;
-tiene_signo : ( PLUS | MINUS )? ;
+tiene_signo : PLUS | MINUS ;
 tiene_var : ID
 {
 if not self.funcdir.funciones[self.nombrefuncion]["tabla"].buscar_var($ID.text):
     raise Exception(f"Varible {$ID.text} no declarada")
 } | cte ;
 
-cte : CTE_ENTERO | CTE_FLOTANTE ;
+cte : CTE_ENTERO
+{
+direccion = self.contadorconstante
+self.contadorconstante = direccion + 1
+self.funcdir.funciones[self.nombrefuncion]["tabla"].add_constante($CTE_ENTERO.text,"entero",direccion)
+} | CTE_FLOTANTE 
+{
+direccion = self.contadorconstante
+self.contadorconstante = direccion + 1
+self.funcdir.funciones[self.nombrefuncion]["tabla"].add_constante($CTE_FLOTANTE.text,"flotante",direccion)
+};
 
 condicion : SI LPAREN expresion RPAREN
 {

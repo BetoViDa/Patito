@@ -29,7 +29,7 @@ class TablaVar:
             if direccion :
                 return direccion["direccion"]
             else:
-                raise ValueError("Error en get direccion")
+                raise ValueError("Error en get direccion",nombre)
             
     def encontrar_por_nombre(self,nombre):
         return next((item for item in self.tabla.values() if item["nombre"] == nombre), None)

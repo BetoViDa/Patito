@@ -10,7 +10,7 @@ else:
 
 def serializedATN():
     return [
-        4,1,34,290,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
+        4,1,34,295,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
         6,2,7,7,7,2,8,7,8,2,9,7,9,2,10,7,10,2,11,7,11,2,12,7,12,2,13,7,13,
         2,14,7,14,2,15,7,15,2,16,7,16,2,17,7,17,2,18,7,18,2,19,7,19,2,20,
         7,20,2,21,7,21,2,22,7,22,2,23,7,23,2,24,7,24,2,25,7,25,2,26,7,26,
@@ -26,87 +26,89 @@ def serializedATN():
         8,14,1,15,1,15,1,15,1,15,1,15,1,15,5,15,183,8,15,10,15,12,15,186,
         9,15,1,16,1,16,1,17,1,17,1,17,1,17,1,17,1,17,5,17,196,8,17,10,17,
         12,17,199,9,17,1,18,1,18,1,19,1,19,1,19,1,19,1,19,1,19,1,19,3,19,
-        210,8,19,1,20,1,20,1,20,1,20,1,21,3,21,217,8,21,1,22,1,22,1,22,3,
-        22,222,8,22,1,23,1,23,1,24,1,24,1,24,1,24,1,24,1,24,1,24,1,24,1,
-        24,1,24,1,24,1,25,1,25,1,25,3,25,240,8,25,1,26,1,26,1,26,1,26,1,
-        26,1,26,1,26,1,26,1,26,1,26,1,27,1,27,1,27,1,27,1,27,1,27,1,28,3,
-        28,259,8,28,1,29,1,29,1,29,1,29,1,29,3,29,266,8,29,1,30,1,30,1,30,
-        1,30,1,30,1,30,1,31,1,31,1,31,1,31,1,31,1,31,1,31,3,31,281,8,31,
-        1,32,1,32,5,32,285,8,32,10,32,12,32,288,9,32,1,32,0,0,33,0,2,4,6,
-        8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,
-        52,54,56,58,60,62,64,0,4,1,0,11,12,1,0,25,26,1,0,27,28,1,0,3,4,282,
-        0,66,1,0,0,0,2,77,1,0,0,0,4,82,1,0,0,0,6,85,1,0,0,0,8,94,1,0,0,0,
-        10,105,1,0,0,0,12,107,1,0,0,0,14,133,1,0,0,0,16,135,1,0,0,0,18,142,
-        1,0,0,0,20,149,1,0,0,0,22,151,1,0,0,0,24,157,1,0,0,0,26,164,1,0,
-        0,0,28,174,1,0,0,0,30,176,1,0,0,0,32,187,1,0,0,0,34,189,1,0,0,0,
-        36,200,1,0,0,0,38,209,1,0,0,0,40,211,1,0,0,0,42,216,1,0,0,0,44,221,
-        1,0,0,0,46,223,1,0,0,0,48,225,1,0,0,0,50,239,1,0,0,0,52,241,1,0,
-        0,0,54,251,1,0,0,0,56,258,1,0,0,0,58,265,1,0,0,0,60,267,1,0,0,0,
-        62,280,1,0,0,0,64,286,1,0,0,0,66,67,5,5,0,0,67,68,5,1,0,0,68,69,
-        6,0,-1,0,69,70,5,23,0,0,70,71,3,2,1,0,71,72,3,4,2,0,72,73,5,7,0,
-        0,73,74,3,16,8,0,74,75,5,15,0,0,75,1,1,0,0,0,76,78,3,6,3,0,77,76,
-        1,0,0,0,77,78,1,0,0,0,78,3,1,0,0,0,79,81,3,12,6,0,80,79,1,0,0,0,
-        81,84,1,0,0,0,82,80,1,0,0,0,82,83,1,0,0,0,83,5,1,0,0,0,84,82,1,0,
-        0,0,85,90,5,16,0,0,86,87,3,8,4,0,87,88,6,3,-1,0,88,89,5,23,0,0,89,
-        91,1,0,0,0,90,86,1,0,0,0,91,92,1,0,0,0,92,90,1,0,0,0,92,93,1,0,0,
-        0,93,7,1,0,0,0,94,99,5,1,0,0,95,96,5,22,0,0,96,98,5,1,0,0,97,95,
-        1,0,0,0,98,101,1,0,0,0,99,97,1,0,0,0,99,100,1,0,0,0,100,102,1,0,
-        0,0,101,99,1,0,0,0,102,103,5,24,0,0,103,104,3,10,5,0,104,9,1,0,0,
-        0,105,106,7,0,0,0,106,11,1,0,0,0,107,108,5,6,0,0,108,109,5,1,0,0,
-        109,110,6,6,-1,0,110,111,5,18,0,0,111,112,3,14,7,0,112,113,6,6,-1,
-        0,113,114,5,19,0,0,114,115,5,20,0,0,115,116,3,2,1,0,116,117,3,16,
-        8,0,117,118,5,21,0,0,118,119,5,23,0,0,119,13,1,0,0,0,120,121,5,1,
-        0,0,121,122,5,24,0,0,122,124,3,10,5,0,123,120,1,0,0,0,123,124,1,
-        0,0,0,124,134,1,0,0,0,125,126,5,1,0,0,126,127,5,24,0,0,127,128,3,
-        10,5,0,128,129,5,22,0,0,129,130,3,14,7,0,130,132,1,0,0,0,131,125,
-        1,0,0,0,131,132,1,0,0,0,132,134,1,0,0,0,133,123,1,0,0,0,133,131,
-        1,0,0,0,134,15,1,0,0,0,135,136,5,20,0,0,136,137,3,18,9,0,137,138,
-        5,21,0,0,138,17,1,0,0,0,139,140,3,20,10,0,140,141,3,18,9,0,141,143,
-        1,0,0,0,142,139,1,0,0,0,142,143,1,0,0,0,143,19,1,0,0,0,144,150,3,
-        22,11,0,145,150,3,48,24,0,146,150,3,52,26,0,147,150,3,54,27,0,148,
-        150,3,60,30,0,149,144,1,0,0,0,149,145,1,0,0,0,149,146,1,0,0,0,149,
-        147,1,0,0,0,149,148,1,0,0,0,150,21,1,0,0,0,151,152,5,1,0,0,152,153,
-        5,29,0,0,153,154,3,24,12,0,154,155,6,11,-1,0,155,156,5,23,0,0,156,
-        23,1,0,0,0,157,158,3,30,15,0,158,159,3,26,13,0,159,25,1,0,0,0,160,
-        161,3,28,14,0,161,162,3,30,15,0,162,163,6,13,-1,0,163,165,1,0,0,
-        0,164,160,1,0,0,0,164,165,1,0,0,0,165,27,1,0,0,0,166,167,5,33,0,
-        0,167,175,6,14,-1,0,168,169,5,32,0,0,169,175,6,14,-1,0,170,171,5,
-        30,0,0,171,175,6,14,-1,0,172,173,5,31,0,0,173,175,6,14,-1,0,174,
-        166,1,0,0,0,174,168,1,0,0,0,174,170,1,0,0,0,174,172,1,0,0,0,175,
-        29,1,0,0,0,176,184,3,34,17,0,177,178,3,32,16,0,178,179,6,15,-1,0,
-        179,180,3,34,17,0,180,181,6,15,-1,0,181,183,1,0,0,0,182,177,1,0,
-        0,0,183,186,1,0,0,0,184,182,1,0,0,0,184,185,1,0,0,0,185,31,1,0,0,
-        0,186,184,1,0,0,0,187,188,7,1,0,0,188,33,1,0,0,0,189,197,3,38,19,
-        0,190,191,3,36,18,0,191,192,6,17,-1,0,192,193,3,38,19,0,193,194,
-        6,17,-1,0,194,196,1,0,0,0,195,190,1,0,0,0,196,199,1,0,0,0,197,195,
-        1,0,0,0,197,198,1,0,0,0,198,35,1,0,0,0,199,197,1,0,0,0,200,201,7,
-        2,0,0,201,37,1,0,0,0,202,203,5,18,0,0,203,204,3,24,12,0,204,205,
-        5,19,0,0,205,210,1,0,0,0,206,207,3,40,20,0,207,208,6,19,-1,0,208,
-        210,1,0,0,0,209,202,1,0,0,0,209,206,1,0,0,0,210,39,1,0,0,0,211,212,
-        3,42,21,0,212,213,3,44,22,0,213,214,6,20,-1,0,214,41,1,0,0,0,215,
-        217,7,1,0,0,216,215,1,0,0,0,216,217,1,0,0,0,217,43,1,0,0,0,218,219,
-        5,1,0,0,219,222,6,22,-1,0,220,222,3,46,23,0,221,218,1,0,0,0,221,
-        220,1,0,0,0,222,45,1,0,0,0,223,224,7,3,0,0,224,47,1,0,0,0,225,226,
-        5,9,0,0,226,227,5,18,0,0,227,228,3,24,12,0,228,229,5,19,0,0,229,
-        230,6,24,-1,0,230,231,5,17,0,0,231,232,3,16,8,0,232,233,3,50,25,
-        0,233,234,5,23,0,0,234,235,6,24,-1,0,235,49,1,0,0,0,236,237,5,10,
-        0,0,237,238,6,25,-1,0,238,240,3,16,8,0,239,236,1,0,0,0,239,240,1,
-        0,0,0,240,51,1,0,0,0,241,242,5,8,0,0,242,243,5,18,0,0,243,244,3,
-        24,12,0,244,245,5,19,0,0,245,246,5,17,0,0,246,247,6,26,-1,0,247,
-        248,3,16,8,0,248,249,5,23,0,0,249,250,6,26,-1,0,250,53,1,0,0,0,251,
-        252,5,1,0,0,252,253,5,18,0,0,253,254,3,56,28,0,254,255,5,19,0,0,
-        255,256,5,23,0,0,256,55,1,0,0,0,257,259,3,58,29,0,258,257,1,0,0,
-        0,258,259,1,0,0,0,259,57,1,0,0,0,260,266,3,24,12,0,261,262,3,24,
-        12,0,262,263,5,22,0,0,263,264,3,58,29,0,264,266,1,0,0,0,265,260,
-        1,0,0,0,265,261,1,0,0,0,266,59,1,0,0,0,267,268,5,13,0,0,268,269,
-        5,18,0,0,269,270,3,62,31,0,270,271,5,19,0,0,271,272,5,23,0,0,272,
-        61,1,0,0,0,273,274,3,24,12,0,274,275,6,31,-1,0,275,276,3,64,32,0,
-        276,281,1,0,0,0,277,278,5,2,0,0,278,279,6,31,-1,0,279,281,3,64,32,
-        0,280,273,1,0,0,0,280,277,1,0,0,0,281,63,1,0,0,0,282,283,5,22,0,
-        0,283,285,3,62,31,0,284,282,1,0,0,0,285,288,1,0,0,0,286,284,1,0,
-        0,0,286,287,1,0,0,0,287,65,1,0,0,0,288,286,1,0,0,0,21,77,82,92,99,
-        123,131,133,142,149,164,174,184,197,209,216,221,239,258,265,280,
-        286
+        210,8,19,1,20,3,20,213,8,20,1,20,1,20,1,20,1,21,1,21,1,22,1,22,1,
+        22,3,22,223,8,22,1,23,1,23,1,23,1,23,3,23,229,8,23,1,24,1,24,1,24,
+        1,24,1,24,1,24,1,24,1,24,1,24,1,24,1,24,1,25,1,25,1,25,3,25,245,
+        8,25,1,26,1,26,1,26,1,26,1,26,1,26,1,26,1,26,1,26,1,26,1,27,1,27,
+        1,27,1,27,1,27,1,27,1,28,3,28,264,8,28,1,29,1,29,1,29,1,29,1,29,
+        3,29,271,8,29,1,30,1,30,1,30,1,30,1,30,1,30,1,31,1,31,1,31,1,31,
+        1,31,1,31,1,31,3,31,286,8,31,1,32,1,32,5,32,290,8,32,10,32,12,32,
+        293,9,32,1,32,0,0,33,0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,
+        32,34,36,38,40,42,44,46,48,50,52,54,56,58,60,62,64,0,3,1,0,11,12,
+        1,0,25,26,1,0,27,28,288,0,66,1,0,0,0,2,77,1,0,0,0,4,82,1,0,0,0,6,
+        85,1,0,0,0,8,94,1,0,0,0,10,105,1,0,0,0,12,107,1,0,0,0,14,133,1,0,
+        0,0,16,135,1,0,0,0,18,142,1,0,0,0,20,149,1,0,0,0,22,151,1,0,0,0,
+        24,157,1,0,0,0,26,164,1,0,0,0,28,174,1,0,0,0,30,176,1,0,0,0,32,187,
+        1,0,0,0,34,189,1,0,0,0,36,200,1,0,0,0,38,209,1,0,0,0,40,212,1,0,
+        0,0,42,217,1,0,0,0,44,222,1,0,0,0,46,228,1,0,0,0,48,230,1,0,0,0,
+        50,244,1,0,0,0,52,246,1,0,0,0,54,256,1,0,0,0,56,263,1,0,0,0,58,270,
+        1,0,0,0,60,272,1,0,0,0,62,285,1,0,0,0,64,291,1,0,0,0,66,67,5,5,0,
+        0,67,68,5,1,0,0,68,69,6,0,-1,0,69,70,5,23,0,0,70,71,3,2,1,0,71,72,
+        3,4,2,0,72,73,5,7,0,0,73,74,3,16,8,0,74,75,5,15,0,0,75,1,1,0,0,0,
+        76,78,3,6,3,0,77,76,1,0,0,0,77,78,1,0,0,0,78,3,1,0,0,0,79,81,3,12,
+        6,0,80,79,1,0,0,0,81,84,1,0,0,0,82,80,1,0,0,0,82,83,1,0,0,0,83,5,
+        1,0,0,0,84,82,1,0,0,0,85,90,5,16,0,0,86,87,3,8,4,0,87,88,6,3,-1,
+        0,88,89,5,23,0,0,89,91,1,0,0,0,90,86,1,0,0,0,91,92,1,0,0,0,92,90,
+        1,0,0,0,92,93,1,0,0,0,93,7,1,0,0,0,94,99,5,1,0,0,95,96,5,22,0,0,
+        96,98,5,1,0,0,97,95,1,0,0,0,98,101,1,0,0,0,99,97,1,0,0,0,99,100,
+        1,0,0,0,100,102,1,0,0,0,101,99,1,0,0,0,102,103,5,24,0,0,103,104,
+        3,10,5,0,104,9,1,0,0,0,105,106,7,0,0,0,106,11,1,0,0,0,107,108,5,
+        6,0,0,108,109,5,1,0,0,109,110,6,6,-1,0,110,111,5,18,0,0,111,112,
+        3,14,7,0,112,113,6,6,-1,0,113,114,5,19,0,0,114,115,5,20,0,0,115,
+        116,3,2,1,0,116,117,3,16,8,0,117,118,5,21,0,0,118,119,5,23,0,0,119,
+        13,1,0,0,0,120,121,5,1,0,0,121,122,5,24,0,0,122,124,3,10,5,0,123,
+        120,1,0,0,0,123,124,1,0,0,0,124,134,1,0,0,0,125,126,5,1,0,0,126,
+        127,5,24,0,0,127,128,3,10,5,0,128,129,5,22,0,0,129,130,3,14,7,0,
+        130,132,1,0,0,0,131,125,1,0,0,0,131,132,1,0,0,0,132,134,1,0,0,0,
+        133,123,1,0,0,0,133,131,1,0,0,0,134,15,1,0,0,0,135,136,5,20,0,0,
+        136,137,3,18,9,0,137,138,5,21,0,0,138,17,1,0,0,0,139,140,3,20,10,
+        0,140,141,3,18,9,0,141,143,1,0,0,0,142,139,1,0,0,0,142,143,1,0,0,
+        0,143,19,1,0,0,0,144,150,3,22,11,0,145,150,3,48,24,0,146,150,3,52,
+        26,0,147,150,3,54,27,0,148,150,3,60,30,0,149,144,1,0,0,0,149,145,
+        1,0,0,0,149,146,1,0,0,0,149,147,1,0,0,0,149,148,1,0,0,0,150,21,1,
+        0,0,0,151,152,5,1,0,0,152,153,5,29,0,0,153,154,3,24,12,0,154,155,
+        6,11,-1,0,155,156,5,23,0,0,156,23,1,0,0,0,157,158,3,30,15,0,158,
+        159,3,26,13,0,159,25,1,0,0,0,160,161,3,28,14,0,161,162,3,30,15,0,
+        162,163,6,13,-1,0,163,165,1,0,0,0,164,160,1,0,0,0,164,165,1,0,0,
+        0,165,27,1,0,0,0,166,167,5,33,0,0,167,175,6,14,-1,0,168,169,5,32,
+        0,0,169,175,6,14,-1,0,170,171,5,30,0,0,171,175,6,14,-1,0,172,173,
+        5,31,0,0,173,175,6,14,-1,0,174,166,1,0,0,0,174,168,1,0,0,0,174,170,
+        1,0,0,0,174,172,1,0,0,0,175,29,1,0,0,0,176,184,3,34,17,0,177,178,
+        3,32,16,0,178,179,6,15,-1,0,179,180,3,34,17,0,180,181,6,15,-1,0,
+        181,183,1,0,0,0,182,177,1,0,0,0,183,186,1,0,0,0,184,182,1,0,0,0,
+        184,185,1,0,0,0,185,31,1,0,0,0,186,184,1,0,0,0,187,188,7,1,0,0,188,
+        33,1,0,0,0,189,197,3,38,19,0,190,191,3,36,18,0,191,192,6,17,-1,0,
+        192,193,3,38,19,0,193,194,6,17,-1,0,194,196,1,0,0,0,195,190,1,0,
+        0,0,196,199,1,0,0,0,197,195,1,0,0,0,197,198,1,0,0,0,198,35,1,0,0,
+        0,199,197,1,0,0,0,200,201,7,2,0,0,201,37,1,0,0,0,202,203,5,18,0,
+        0,203,204,3,24,12,0,204,205,5,19,0,0,205,210,1,0,0,0,206,207,3,40,
+        20,0,207,208,6,19,-1,0,208,210,1,0,0,0,209,202,1,0,0,0,209,206,1,
+        0,0,0,210,39,1,0,0,0,211,213,3,42,21,0,212,211,1,0,0,0,212,213,1,
+        0,0,0,213,214,1,0,0,0,214,215,3,44,22,0,215,216,6,20,-1,0,216,41,
+        1,0,0,0,217,218,7,1,0,0,218,43,1,0,0,0,219,220,5,1,0,0,220,223,6,
+        22,-1,0,221,223,3,46,23,0,222,219,1,0,0,0,222,221,1,0,0,0,223,45,
+        1,0,0,0,224,225,5,3,0,0,225,229,6,23,-1,0,226,227,5,4,0,0,227,229,
+        6,23,-1,0,228,224,1,0,0,0,228,226,1,0,0,0,229,47,1,0,0,0,230,231,
+        5,9,0,0,231,232,5,18,0,0,232,233,3,24,12,0,233,234,5,19,0,0,234,
+        235,6,24,-1,0,235,236,5,17,0,0,236,237,3,16,8,0,237,238,3,50,25,
+        0,238,239,5,23,0,0,239,240,6,24,-1,0,240,49,1,0,0,0,241,242,5,10,
+        0,0,242,243,6,25,-1,0,243,245,3,16,8,0,244,241,1,0,0,0,244,245,1,
+        0,0,0,245,51,1,0,0,0,246,247,5,8,0,0,247,248,5,18,0,0,248,249,3,
+        24,12,0,249,250,5,19,0,0,250,251,5,17,0,0,251,252,6,26,-1,0,252,
+        253,3,16,8,0,253,254,5,23,0,0,254,255,6,26,-1,0,255,53,1,0,0,0,256,
+        257,5,1,0,0,257,258,5,18,0,0,258,259,3,56,28,0,259,260,5,19,0,0,
+        260,261,5,23,0,0,261,55,1,0,0,0,262,264,3,58,29,0,263,262,1,0,0,
+        0,263,264,1,0,0,0,264,57,1,0,0,0,265,271,3,24,12,0,266,267,3,24,
+        12,0,267,268,5,22,0,0,268,269,3,58,29,0,269,271,1,0,0,0,270,265,
+        1,0,0,0,270,266,1,0,0,0,271,59,1,0,0,0,272,273,5,13,0,0,273,274,
+        5,18,0,0,274,275,3,62,31,0,275,276,5,19,0,0,276,277,5,23,0,0,277,
+        61,1,0,0,0,278,279,3,24,12,0,279,280,6,31,-1,0,280,281,3,64,32,0,
+        281,286,1,0,0,0,282,283,5,2,0,0,283,284,6,31,-1,0,284,286,3,64,32,
+        0,285,278,1,0,0,0,285,282,1,0,0,0,286,63,1,0,0,0,287,288,5,22,0,
+        0,288,290,3,62,31,0,289,287,1,0,0,0,290,293,1,0,0,0,291,289,1,0,
+        0,0,291,292,1,0,0,0,292,65,1,0,0,0,293,291,1,0,0,0,22,77,82,92,99,
+        123,131,133,142,149,164,174,184,197,209,212,222,228,244,263,270,
+        285,291
     ]
 
 class PatitoParserParser ( Parser ):
@@ -1074,8 +1076,10 @@ class PatitoParserParser ( Parser ):
             self.expresion()
 
             asignar = (None if localctx._ID is None else localctx._ID.text)
+            asignar_dir = self.funcdir.funciones[self.nombrefuncion]["tabla"].get_direccion(asignar)
             op = self.cuadruplo.pop_operating()
-            self.cuadruplo.add_assign_Cuadruplo(self.semantic["="]["codigo"],op,asignar)
+            op_dir = self.funcdir.funciones[self.nombrefuncion]["tabla"].get_direccion(op)
+            self.cuadruplo.add_assign_Cuadruplo(self.semantic["="]["codigo"],op_dir,asignar_dir)
 
             self.state = 155
             self.match(PatitoParserParser.SEMI)
@@ -1184,12 +1188,14 @@ class PatitoParserParser ( Parser ):
                 temp = self.cuadruplo.nuevo_temp()
                 operador = self.cuadruplo.pop_operator()
                 op2 = self.cuadruplo.pop_operating()
+                op2_dir = self.funcdir.funciones[self.nombrefuncion]["tabla"].get_direccion(op2)
                 op1 = self.cuadruplo.pop_operating()
+                op1_dir = self.funcdir.funciones[self.nombrefuncion]["tabla"].get_direccion(op1)
                 direccion = self.contadorconstante
                 tempadd = self.funcdir.funciones[self.nombrefuncion]["tabla"].add_constante(temp,"temp",direccion)
                 self.contadorconstante = direccion + 1
-                self.cuadruplo.add_Cuadruplo(self.semantic[operador]["codigo"],op1,op2,temp)
-                self.cuadruplo.push_operating(temp)
+                self.cuadruplo.add_Cuadruplo(self.semantic[operador]["codigo"],op1_dir,op2_dir,direccion)
+                self.cuadruplo.push_operating(direccion)
 
 
 
@@ -1344,15 +1350,17 @@ class PatitoParserParser ( Parser ):
                 self.state = 179
                 self.termino()
 
-                temp = self.cuadruplo.nuevo_temp();
-                operador = self.cuadruplo.pop_operator();
-                op2 = self.cuadruplo.pop_operating();
-                op1 = self.cuadruplo.pop_operating();
+                temp = self.cuadruplo.nuevo_temp()
+                operador = self.cuadruplo.pop_operator()
+                op2 = self.cuadruplo.pop_operating()
+                op2_dir = self.funcdir.funciones[self.nombrefuncion]["tabla"].get_direccion(op2)
+                op1 = self.cuadruplo.pop_operating()
+                op1_dir = self.funcdir.funciones[self.nombrefuncion]["tabla"].get_direccion(op1)
                 direccion = self.contadorconstante
                 tempadd = self.funcdir.funciones[self.nombrefuncion]["tabla"].add_constante(temp,"temp",direccion)
                 self.contadorconstante = direccion + 1
-                self.cuadruplo.add_Cuadruplo(self.semantic[operador]["codigo"], op1, op2, temp);
-                self.cuadruplo.push_operating(temp);
+                self.cuadruplo.add_Cuadruplo(self.semantic[operador]["codigo"],op1_dir,op2_dir,direccion)
+                self.cuadruplo.push_operating(direccion)
 
                 self.state = 186
                 self._errHandler.sync(self)
@@ -1474,15 +1482,17 @@ class PatitoParserParser ( Parser ):
                 self.state = 192
                 self.factor()
 
-                temp = self.cuadruplo.nuevo_temp();
-                operador = self.cuadruplo.pop_operator();
-                op2 = self.cuadruplo.pop_operating();
-                op1 = self.cuadruplo.pop_operating();
+                temp = self.cuadruplo.nuevo_temp()
+                operador = self.cuadruplo.pop_operator()
+                op2 = self.cuadruplo.pop_operating()
+                op2_dir = self.funcdir.funciones[self.nombrefuncion]["tabla"].get_direccion(op2)
+                op1 = self.cuadruplo.pop_operating()
+                op1_dir = self.funcdir.funciones[self.nombrefuncion]["tabla"].get_direccion(op1)
                 direccion = self.contadorconstante
                 tempadd = self.funcdir.funciones[self.nombrefuncion]["tabla"].add_constante(temp,"temp",direccion)
                 self.contadorconstante = direccion + 1
-                self.cuadruplo.add_Cuadruplo(self.semantic[operador]["codigo"], op1, op2, temp);
-                self.cuadruplo.push_operating(temp);
+                self.cuadruplo.add_Cuadruplo(self.semantic[operador]["codigo"],op1_dir,op2_dir,direccion)
+                self.cuadruplo.push_operating(direccion)
 
                 self.state = 199
                 self._errHandler.sync(self)
@@ -1626,14 +1636,15 @@ class PatitoParserParser ( Parser ):
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
+            self._tiene_signo = None # Tiene_signoContext
             self._tiene_var = None # Tiene_varContext
-
-        def tiene_signo(self):
-            return self.getTypedRuleContext(PatitoParserParser.Tiene_signoContext,0)
-
 
         def tiene_var(self):
             return self.getTypedRuleContext(PatitoParserParser.Tiene_varContext,0)
+
+
+        def tiene_signo(self):
+            return self.getTypedRuleContext(PatitoParserParser.Tiene_signoContext,0)
 
 
         def getRuleIndex(self):
@@ -1654,15 +1665,31 @@ class PatitoParserParser ( Parser ):
 
         localctx = PatitoParserParser.Factor_operacionesContext(self, self._ctx, self.state)
         self.enterRule(localctx, 40, self.RULE_factor_operaciones)
+        self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 211
-            self.tiene_signo()
             self.state = 212
+            self._errHandler.sync(self)
+            _la = self._input.LA(1)
+            if _la==25 or _la==26:
+                self.state = 211
+                localctx._tiene_signo = self.tiene_signo()
+
+
+            self.state = 214
             localctx._tiene_var = self.tiene_var()
 
             val = (None if localctx._tiene_var is None else self._input.getText(localctx._tiene_var.start,localctx._tiene_var.stop))
+            signo = (None if localctx._tiene_signo is None else self._input.getText(localctx._tiene_signo.start,localctx._tiene_signo.stop))
             llave = self.funcdir.funciones[self.nombrefuncion]["tabla"].buscar_var(val)
+            val_dir = self.funcdir.funciones[self.nombrefuncion]["tabla"].get_direccion(val)
+            if signo:
+                if signo == "-":
+                    newval = signo + val
+                    self.funcdir.funciones[self.nombrefuncion]["tabla"].editar_val_por_direccion(val_dir,newval)
+                else: 
+                    newval = signo + val
+                    self.funcdir.funciones[self.nombrefuncion]["tabla"].editar_val_por_direccion(val_dir,newval)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -1707,19 +1734,13 @@ class PatitoParserParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 216
-            self._errHandler.sync(self)
+            self.state = 217
             _la = self._input.LA(1)
-            if _la==25 or _la==26:
-                self.state = 215
-                _la = self._input.LA(1)
-                if not(_la==25 or _la==26):
-                    self._errHandler.recoverInline(self)
-                else:
-                    self._errHandler.reportMatch(self)
-                    self.consume()
-
-
+            if not(_la==25 or _la==26):
+                self._errHandler.recoverInline(self)
+            else:
+                self._errHandler.reportMatch(self)
+                self.consume()
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1763,12 +1784,12 @@ class PatitoParserParser ( Parser ):
         localctx = PatitoParserParser.Tiene_varContext(self, self._ctx, self.state)
         self.enterRule(localctx, 44, self.RULE_tiene_var)
         try:
-            self.state = 221
+            self.state = 222
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [1]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 218
+                self.state = 219
                 localctx._ID = self.match(PatitoParserParser.ID)
 
                 if not self.funcdir.funciones[self.nombrefuncion]["tabla"].buscar_var((None if localctx._ID is None else localctx._ID.text)):
@@ -1777,7 +1798,7 @@ class PatitoParserParser ( Parser ):
                 pass
             elif token in [3, 4]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 220
+                self.state = 221
                 self.cte()
                 pass
             else:
@@ -1798,6 +1819,8 @@ class PatitoParserParser ( Parser ):
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
+            self._CTE_ENTERO = None # Token
+            self._CTE_FLOTANTE = None # Token
 
         def CTE_ENTERO(self):
             return self.getToken(PatitoParserParser.CTE_ENTERO, 0)
@@ -1823,16 +1846,33 @@ class PatitoParserParser ( Parser ):
 
         localctx = PatitoParserParser.CteContext(self, self._ctx, self.state)
         self.enterRule(localctx, 46, self.RULE_cte)
-        self._la = 0 # Token type
         try:
-            self.enterOuterAlt(localctx, 1)
-            self.state = 223
-            _la = self._input.LA(1)
-            if not(_la==3 or _la==4):
-                self._errHandler.recoverInline(self)
+            self.state = 228
+            self._errHandler.sync(self)
+            token = self._input.LA(1)
+            if token in [3]:
+                self.enterOuterAlt(localctx, 1)
+                self.state = 224
+                localctx._CTE_ENTERO = self.match(PatitoParserParser.CTE_ENTERO)
+
+                direccion = self.contadorconstante
+                self.contadorconstante = direccion + 1
+                self.funcdir.funciones[self.nombrefuncion]["tabla"].add_constante((None if localctx._CTE_ENTERO is None else localctx._CTE_ENTERO.text),"entero",direccion)
+
+                pass
+            elif token in [4]:
+                self.enterOuterAlt(localctx, 2)
+                self.state = 226
+                localctx._CTE_FLOTANTE = self.match(PatitoParserParser.CTE_FLOTANTE)
+
+                direccion = self.contadorconstante
+                self.contadorconstante = direccion + 1
+                self.funcdir.funciones[self.nombrefuncion]["tabla"].add_constante((None if localctx._CTE_FLOTANTE is None else localctx._CTE_FLOTANTE.text),"flotante",direccion)
+
+                pass
             else:
-                self._errHandler.reportMatch(self)
-                self.consume()
+                raise NoViableAltException(self)
+
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1896,13 +1936,13 @@ class PatitoParserParser ( Parser ):
         self.enterRule(localctx, 48, self.RULE_condicion)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 225
+            self.state = 230
             self.match(PatitoParserParser.SI)
-            self.state = 226
+            self.state = 231
             self.match(PatitoParserParser.LPAREN)
-            self.state = 227
+            self.state = 232
             self.expresion()
-            self.state = 228
+            self.state = 233
             self.match(PatitoParserParser.RPAREN)
 
             falso = self.cuadruplo.nuevo_label()
@@ -1910,13 +1950,13 @@ class PatitoParserParser ( Parser ):
             self.cuadruplo.add_conditional_jump(op,falso)
             self.cuadruplo.push_jump(falso)
 
-            self.state = 230
+            self.state = 235
             self.match(PatitoParserParser.HAZ)
-            self.state = 231
+            self.state = 236
             self.cuerpo()
-            self.state = 232
+            self.state = 237
             self.complemento_cond()
-            self.state = 233
+            self.state = 238
             self.match(PatitoParserParser.SEMI)
 
             final = self.cuadruplo.pop_jump()
@@ -1967,11 +2007,11 @@ class PatitoParserParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 239
+            self.state = 244
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==10:
-                self.state = 236
+                self.state = 241
                 self.match(PatitoParserParser.SINO)
 
                 bypass = self.cuadruplo.nuevo_label()
@@ -1981,7 +2021,7 @@ class PatitoParserParser ( Parser ):
                 cuentaelse = self.cuadruplo.get_current_count()
                 self.cuadruplo.edit_Cuadruplo_by_label(salto,cuentaelse)
 
-                self.state = 238
+                self.state = 243
                 self.cuerpo()
 
 
@@ -2044,15 +2084,15 @@ class PatitoParserParser ( Parser ):
         self.enterRule(localctx, 52, self.RULE_ciclo)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 241
+            self.state = 246
             self.match(PatitoParserParser.MIENTRAS)
-            self.state = 242
+            self.state = 247
             self.match(PatitoParserParser.LPAREN)
-            self.state = 243
+            self.state = 248
             self.expresion()
-            self.state = 244
+            self.state = 249
             self.match(PatitoParserParser.RPAREN)
-            self.state = 245
+            self.state = 250
             self.match(PatitoParserParser.HAZ)
 
             falso = self.cuadruplo.nuevo_label()
@@ -2062,9 +2102,9 @@ class PatitoParserParser ( Parser ):
             self.cuadruplo.push_jump(falso)
             self.cuadruplo.push_jump(cicloInd)
 
-            self.state = 247
+            self.state = 252
             self.cuerpo()
-            self.state = 248
+            self.state = 253
             self.match(PatitoParserParser.SEMI)
 
             op = self.cuadruplo.pop_operating()
@@ -2126,15 +2166,15 @@ class PatitoParserParser ( Parser ):
         self.enterRule(localctx, 54, self.RULE_llamada)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 251
+            self.state = 256
             self.match(PatitoParserParser.ID)
-            self.state = 252
+            self.state = 257
             self.match(PatitoParserParser.LPAREN)
-            self.state = 253
+            self.state = 258
             self.complemento_llamada()
-            self.state = 254
+            self.state = 259
             self.match(PatitoParserParser.RPAREN)
-            self.state = 255
+            self.state = 260
             self.match(PatitoParserParser.SEMI)
         except RecognitionException as re:
             localctx.exception = re
@@ -2177,11 +2217,11 @@ class PatitoParserParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 258
+            self.state = 263
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if (((_la) & ~0x3f) == 0 and ((1 << _la) & 100925466) != 0):
-                self.state = 257
+                self.state = 262
                 self.tiene_expresion()
 
 
@@ -2231,22 +2271,22 @@ class PatitoParserParser ( Parser ):
         localctx = PatitoParserParser.Tiene_expresionContext(self, self._ctx, self.state)
         self.enterRule(localctx, 58, self.RULE_tiene_expresion)
         try:
-            self.state = 265
+            self.state = 270
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,18,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,19,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 260
+                self.state = 265
                 self.expresion()
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 261
+                self.state = 266
                 self.expresion()
-                self.state = 262
+                self.state = 267
                 self.match(PatitoParserParser.COMMA)
-                self.state = 263
+                self.state = 268
                 self.tiene_expresion()
                 pass
 
@@ -2303,15 +2343,15 @@ class PatitoParserParser ( Parser ):
         self.enterRule(localctx, 60, self.RULE_imprime)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 267
+            self.state = 272
             self.match(PatitoParserParser.ESCRIBE)
-            self.state = 268
+            self.state = 273
             self.match(PatitoParserParser.LPAREN)
-            self.state = 269
+            self.state = 274
             self.complemento_imprime()
-            self.state = 270
+            self.state = 275
             self.match(PatitoParserParser.RPAREN)
-            self.state = 271
+            self.state = 276
             self.match(PatitoParserParser.SEMI)
         except RecognitionException as re:
             localctx.exception = re
@@ -2360,24 +2400,24 @@ class PatitoParserParser ( Parser ):
         localctx = PatitoParserParser.Complemento_imprimeContext(self, self._ctx, self.state)
         self.enterRule(localctx, 62, self.RULE_complemento_imprime)
         try:
-            self.state = 280
+            self.state = 285
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [1, 3, 4, 18, 25, 26]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 273
+                self.state = 278
                 self.expresion()
 
                 val = self.cuadruplo.pop_operating()
                 add = self.funcdir.funciones[self.nombrefuncion]["tabla"].get_direccion(val)
                 self.cuadruplo.add_print_Cuadruplo(add)
 
-                self.state = 275
+                self.state = 280
                 self.complemento_imprime_aux()
                 pass
             elif token in [2]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 277
+                self.state = 282
                 localctx._CTE_LETRERO = self.match(PatitoParserParser.CTE_LETRERO)
 
                 direccion = self.contadorconstante
@@ -2386,7 +2426,7 @@ class PatitoParserParser ( Parser ):
                 add = self.funcdir.funciones[self.nombrefuncion]["tabla"].get_direccion(direccion)
                 self.cuadruplo.add_print_Cuadruplo(add)
 
-                self.state = 279
+                self.state = 284
                 self.complemento_imprime_aux()
                 pass
             else:
@@ -2441,18 +2481,18 @@ class PatitoParserParser ( Parser ):
         self.enterRule(localctx, 64, self.RULE_complemento_imprime_aux)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 286
+            self.state = 291
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,20,self._ctx)
+            _alt = self._interp.adaptivePredict(self._input,21,self._ctx)
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
-                    self.state = 282
+                    self.state = 287
                     self.match(PatitoParserParser.COMMA)
-                    self.state = 283
+                    self.state = 288
                     self.complemento_imprime() 
-                self.state = 288
+                self.state = 293
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,20,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input,21,self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
