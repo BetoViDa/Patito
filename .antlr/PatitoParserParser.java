@@ -820,6 +820,8 @@ public class PatitoParserParser extends Parser {
 			asignar_dir = self.funcdir.funciones[self.nombrefuncion]["tabla"].get_direccion(asignar)
 			op = self.cuadruplo.peek_operating()
 			op_dir = self.funcdir.funciones[self.nombrefuncion]["tabla"].get_direccion(op)
+			if not op_dir:
+			    op_dir = self.constantes.get_direccion(op)
 			self.cuadruplo.add_assign_Cuadruplo(self.semantic["="]["codigo"],op_dir,asignar_dir)
 
 			setState(156);
@@ -920,7 +922,7 @@ public class PatitoParserParser extends Parser {
 				else:
 				    direccion = self.contadorflotantetemporal
 				    self.contadorflotantetemporal = direccion + 1
-				tempadd = self.funcdir.funciones[self.nombrefuncion]["tabla"].add_constante(temp,temp_tipo,direccion)
+				tempadd = self.funcdir.funciones[self.nombrefuncion]["tabla"].add_temp(temp,temp_tipo,direccion)
 				self.contadorconstante = direccion + 1
 				self.cuadruplo.add_Cuadruplo(self.semantic[operador]["codigo"],op1_dir,op2_dir,direccion)
 				self.cuadruplo.push_operating(direccion)
@@ -1075,7 +1077,7 @@ public class PatitoParserParser extends Parser {
 				else:
 				    direccion = self.contadorflotantetemporal
 				    self.contadorflotantetemporal = direccion + 1
-				tempadd = self.funcdir.funciones[self.nombrefuncion]["tabla"].add_constante(temp,temp_tipo,direccion)
+				tempadd = self.funcdir.funciones[self.nombrefuncion]["tabla"].add_temp(temp,temp_tipo,direccion)
 				self.contadorconstante = direccion + 1
 				self.cuadruplo.add_Cuadruplo(self.semantic[operador]["codigo"],op1_dir,op2_dir,direccion)
 				self.cuadruplo.push_operating(direccion)
@@ -1199,7 +1201,7 @@ public class PatitoParserParser extends Parser {
 				else:
 				    direccion = self.contadorflotantetemporal
 				    self.contadorflotantetemporal = direccion + 1
-				tempadd = self.funcdir.funciones[self.nombrefuncion]["tabla"].add_constante(temp,temp_tipo,direccion)
+				tempadd = self.funcdir.funciones[self.nombrefuncion]["tabla"].add_temp(temp,temp_tipo,direccion)
 				self.contadorconstante = direccion + 1
 				self.cuadruplo.add_Cuadruplo(self.semantic[operador]["codigo"],op1_dir,op2_dir,direccion)
 				self.cuadruplo.push_operating(direccion)
@@ -1960,6 +1962,8 @@ public class PatitoParserParser extends Parser {
 
 				val = self.cuadruplo.pop_operating()
 				add = self.funcdir.funciones[self.nombrefuncion]["tabla"].get_direccion(val)
+				if not add:
+				    add = self.constantes.get_direccion(val)
 				self.cuadruplo.add_print_Cuadruplo(add)
 
 				setState(281);
@@ -1973,9 +1977,9 @@ public class PatitoParserParser extends Parser {
 				((Complemento_imprimeContext)_localctx).CTE_LETRERO = match(CTE_LETRERO);
 
 				direccion = self.contadorletreroconstante
-				val = self.funcdir.funciones[self.nombrefuncion]["tabla"].add_constante(((Complemento_imprimeContext)_localctx).CTE_LETRERO,"letrero",direccion)
+				val = self.constantes.add_constante((((Complemento_imprimeContext)_localctx).CTE_LETRERO!=null?((Complemento_imprimeContext)_localctx).CTE_LETRERO.getText():null),"letrero",direccion)
 				self.contadorletreroconstante = direccion + 1
-				add = self.funcdir.funciones[self.nombrefuncion]["tabla"].get_direccion(direccion)
+				add = self.constantes.get_direccion(direccion)
 				self.cuadruplo.add_print_Cuadruplo(add)
 
 				setState(285);

@@ -3,6 +3,7 @@ from antlr4 import *
 from PatitoLexer import PatitoLexer
 from PatitoParserParser import PatitoParserParser
 from Semantica import Dirfuncion
+from Semantica import TablaCons
 from cuadruplos import Cuadruplotabla
 from CuboSemantico import CuboSemantico
 
@@ -19,9 +20,11 @@ def main(input_file):
     
     funciones = Dirfuncion()
     cuadruplo = Cuadruplotabla()
+    constantes = TablaCons()
     semantic = CuboSemantico
     
     parser.funcdir = funciones
+    parser.constantes = constantes
     parser.semantic = semantic
     parser.cuadruplo = cuadruplo
     
@@ -33,7 +36,11 @@ def main(input_file):
     # Imprimir el árbol de parseo
     print("Árbol de parseo:")
     print(tree.toStringTree(recog=parser))
+    print("\n")
     funciones.get_dir()
+    print("\n")
+    print("Constantes")
+    constantes.print_tabla()
     print("\n")
     print("Cuadruplos")
     cuadruplo.print_Cuadruplo_tabla()

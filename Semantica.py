@@ -1,3 +1,58 @@
+class TablaCons():
+    def __init__(self):  
+        self.tabla = {}
+
+    def get_tabla(self):
+        return self.tabla
+    
+    def print_tabla(self):
+        if self.tabla != {}:
+            tabla = self.tabla
+            print(
+                    f"Constantes: {tabla if tabla else 'Sin constantes'}"
+                )
+            return True
+        else:
+            print("Sin funciones")
+
+    def add_constante(self, nombre, tipo,direccion):
+        if not self.buscar_constante(nombre):
+            self.tabla[direccion] = {"nombre":nombre,"tipo":tipo,"direccion":direccion}
+            return True
+        else:
+            raise ValueError(f"'{nombre}' Ya definido.")
+
+    def get_tipo(self,nombre):
+        if self.buscar_constante(nombre):
+            return self.tabla[nombre]["tipo"]
+        else:
+            raise ValueError(f"Variable no definida", nombre)
+    
+    def get_direccion(self,nombre):
+        if self.buscar_constante(nombre):
+            return self.tabla[nombre]["direccion"]
+        else:
+            direccion = self.encontrar_por_nombre(nombre)
+            if direccion :
+                return direccion["direccion"]
+            else:
+                raise ValueError("Error en get direccion",nombre)
+            
+    def encontrar_por_nombre(self,nombre):
+        return next((item for item in self.tabla.values() if item["nombre"] == nombre), None)
+
+    def editar_val_por_direccion(self,direccion,valor):
+        val = next((item for item in self.tabla.values() if item["direccion"] == direccion), False)
+        if val:
+            self.tabla[val["nombre"]]["nombre"] = valor
+        else:
+            raise ValueError(f"Error en editar por direccion")
+    
+    def buscar_constante(self, nombre):
+        return nombre in self.tabla
+
+
+
 class TablaVar:
     def __init__(self):  
         self.tabla = {}
@@ -15,6 +70,9 @@ class TablaVar:
     def add_constante(self,nombre,tipo,direccion):
         self.tabla[direccion] = {"nombre":nombre,"tipo":tipo,"direccion":direccion}
 
+    def add_temp(self,nombre,tipo,direccion):
+        self.tabla[direccion] = {"nombre":nombre,"tipo":tipo,"direccion":direccion}
+    
     def get_tipo(self,nombre):
         if self.buscar_var(nombre):
             return self.tabla[nombre]["tipo"]
@@ -29,7 +87,7 @@ class TablaVar:
             if direccion :
                 return direccion["direccion"]
             else:
-                raise ValueError("Error en get direccion",nombre)
+                raise False
             
     def encontrar_por_nombre(self,nombre):
         return next((item for item in self.tabla.values() if item["nombre"] == nombre), None)

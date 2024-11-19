@@ -1213,7 +1213,7 @@ class PatitoParserParser ( Parser ):
                 else:
                     direccion = self.contadorflotantetemporal
                     self.contadorflotantetemporal = direccion + 1
-                tempadd = self.funcdir.funciones[self.nombrefuncion]["tabla"].add_constante(temp,temp_tipo,direccion)
+                tempadd = self.funcdir.funciones[self.nombrefuncion]["tabla"].add_temp(temp,temp_tipo,direccion)
                 self.contadorconstante = direccion + 1
                 self.cuadruplo.add_Cuadruplo(self.semantic[operador]["codigo"],op1_dir,op2_dir,direccion)
                 self.cuadruplo.push_operating(direccion)
@@ -1387,7 +1387,7 @@ class PatitoParserParser ( Parser ):
                 else:
                     direccion = self.contadorflotantetemporal
                     self.contadorflotantetemporal = direccion + 1
-                tempadd = self.funcdir.funciones[self.nombrefuncion]["tabla"].add_constante(temp,temp_tipo,direccion)
+                tempadd = self.funcdir.funciones[self.nombrefuncion]["tabla"].add_temp(temp,temp_tipo,direccion)
                 self.contadorconstante = direccion + 1
                 self.cuadruplo.add_Cuadruplo(self.semantic[operador]["codigo"],op1_dir,op2_dir,direccion)
                 self.cuadruplo.push_operating(direccion)
@@ -1528,7 +1528,7 @@ class PatitoParserParser ( Parser ):
                 else:
                     direccion = self.contadorflotantetemporal
                     self.contadorflotantetemporal = direccion + 1
-                tempadd = self.funcdir.funciones[self.nombrefuncion]["tabla"].add_constante(temp,temp_tipo,direccion)
+                tempadd = self.funcdir.funciones[self.nombrefuncion]["tabla"].add_temp(temp,temp_tipo,direccion)
                 self.contadorconstante = direccion + 1
                 self.cuadruplo.add_Cuadruplo(self.semantic[operador]["codigo"],op1_dir,op2_dir,direccion)
                 self.cuadruplo.push_operating(direccion)
@@ -2463,6 +2463,8 @@ class PatitoParserParser ( Parser ):
 
                 val = self.cuadruplo.pop_operating()
                 add = self.funcdir.funciones[self.nombrefuncion]["tabla"].get_direccion(val)
+                if not add:
+                    add = self.constantes.get_direccion(val)
                 self.cuadruplo.add_print_Cuadruplo(add)
 
                 self.state = 281
@@ -2474,9 +2476,9 @@ class PatitoParserParser ( Parser ):
                 localctx._CTE_LETRERO = self.match(PatitoParserParser.CTE_LETRERO)
 
                 direccion = self.contadorletreroconstante
-                val = self.funcdir.funciones[self.nombrefuncion]["tabla"].add_constante(localctx._CTE_LETRERO,"letrero",direccion)
+                val = self.constantes.add_constante((None if localctx._CTE_LETRERO is None else localctx._CTE_LETRERO.text),"letrero",direccion)
                 self.contadorletreroconstante = direccion + 1
-                add = self.funcdir.funciones[self.nombrefuncion]["tabla"].get_direccion(direccion)
+                add = self.constantes.get_direccion(direccion)
                 self.cuadruplo.add_print_Cuadruplo(add)
 
                 self.state = 285
