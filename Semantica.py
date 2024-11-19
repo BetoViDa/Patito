@@ -87,7 +87,7 @@ class TablaVar:
             if direccion :
                 return direccion["direccion"]
             else:
-                raise False
+                return False
             
     def encontrar_por_nombre(self,nombre):
         return next((item for item in self.tabla.values() if item["nombre"] == nombre), None)

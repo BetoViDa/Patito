@@ -909,12 +909,19 @@ public class PatitoParserParser extends Parser {
 
 				temp = self.cuadruplo.nuevo_temp()
 				operador = self.cuadruplo.pop_operator()
+
 				op2 = self.cuadruplo.pop_operating()
 				op2_tipo = self.cuadruplo.pop_type()
 				op2_dir = self.funcdir.funciones[self.nombrefuncion]["tabla"].get_direccion(op2)
+				if not op2_dir:
+				    op2_dir = self.constantes.get_direccion(op2)
+
 				op1 = self.cuadruplo.pop_operating()
 				op1_tipo = self.cuadruplo.pop_type()
 				op1_dir = self.funcdir.funciones[self.nombrefuncion]["tabla"].get_direccion(op1)
+				if not op1_dir:
+				    op1_dir = self.constantes.get_direccion(op1)
+
 				temp_tipo = self.semantic[operador][op1_tipo][op2_tipo]
 				if temp_tipo == "entero":
 				    direccion = self.contadorenterotemporal
@@ -922,8 +929,8 @@ public class PatitoParserParser extends Parser {
 				else:
 				    direccion = self.contadorflotantetemporal
 				    self.contadorflotantetemporal = direccion + 1
+
 				tempadd = self.funcdir.funciones[self.nombrefuncion]["tabla"].add_temp(temp,temp_tipo,direccion)
-				self.contadorconstante = direccion + 1
 				self.cuadruplo.add_Cuadruplo(self.semantic[operador]["codigo"],op1_dir,op2_dir,direccion)
 				self.cuadruplo.push_operating(direccion)
 				self.cuadruplo.push_type(temp_tipo)
@@ -1064,12 +1071,19 @@ public class PatitoParserParser extends Parser {
 
 				temp = self.cuadruplo.nuevo_temp()
 				operador = self.cuadruplo.pop_operator()
+
 				op2 = self.cuadruplo.pop_operating()
 				op2_tipo = self.cuadruplo.pop_type()
 				op2_dir = self.funcdir.funciones[self.nombrefuncion]["tabla"].get_direccion(op2)
+				if not op2_dir:
+				    op2_dir = self.constantes.get_direccion(op2)
+
 				op1 = self.cuadruplo.pop_operating()
 				op1_tipo = self.cuadruplo.pop_type()
 				op1_dir = self.funcdir.funciones[self.nombrefuncion]["tabla"].get_direccion(op1)
+				if not op1_dir:
+				    op1_dir = self.constantes.get_direccion(op1)
+
 				temp_tipo = self.semantic[operador][op1_tipo][op2_tipo]
 				if temp_tipo == "entero":
 				    direccion = self.contadorenterotemporal
@@ -1077,8 +1091,8 @@ public class PatitoParserParser extends Parser {
 				else:
 				    direccion = self.contadorflotantetemporal
 				    self.contadorflotantetemporal = direccion + 1
+				    
 				tempadd = self.funcdir.funciones[self.nombrefuncion]["tabla"].add_temp(temp,temp_tipo,direccion)
-				self.contadorconstante = direccion + 1
 				self.cuadruplo.add_Cuadruplo(self.semantic[operador]["codigo"],op1_dir,op2_dir,direccion)
 				self.cuadruplo.push_operating(direccion)
 				self.cuadruplo.push_type(temp_tipo)
@@ -1188,12 +1202,19 @@ public class PatitoParserParser extends Parser {
 
 				temp = self.cuadruplo.nuevo_temp()
 				operador = self.cuadruplo.pop_operator()
+
 				op2 = self.cuadruplo.pop_operating()
 				op2_tipo = self.cuadruplo.pop_type()
 				op2_dir = self.funcdir.funciones[self.nombrefuncion]["tabla"].get_direccion(op2)
+				if not op2_dir:
+				    op2_dir = self.constantes.get_direccion(op2)
+
 				op1 = self.cuadruplo.pop_operating()
 				op1_tipo = self.cuadruplo.pop_type()
 				op1_dir = self.funcdir.funciones[self.nombrefuncion]["tabla"].get_direccion(op1)
+				if not op1_dir:
+				    op1_dir = self.constantes.get_direccion(op1)
+
 				temp_tipo = self.semantic[operador][op1_tipo][op2_tipo]
 				if temp_tipo == "entero":
 				    direccion = self.contadorenterotemporal
@@ -1201,8 +1222,8 @@ public class PatitoParserParser extends Parser {
 				else:
 				    direccion = self.contadorflotantetemporal
 				    self.contadorflotantetemporal = direccion + 1
+				    
 				tempadd = self.funcdir.funciones[self.nombrefuncion]["tabla"].add_temp(temp,temp_tipo,direccion)
-				self.contadorconstante = direccion + 1
 				self.cuadruplo.add_Cuadruplo(self.semantic[operador]["codigo"],op1_dir,op2_dir,direccion)
 				self.cuadruplo.push_operating(direccion)
 				self.cuadruplo.push_type(temp_tipo)
@@ -1368,16 +1389,17 @@ public class PatitoParserParser extends Parser {
 
 			val = (((Factor_operacionesContext)_localctx).tiene_var!=null?_input.getText(((Factor_operacionesContext)_localctx).tiene_var.start,((Factor_operacionesContext)_localctx).tiene_var.stop):null)
 			signo = (((Factor_operacionesContext)_localctx).tiene_signo!=null?_input.getText(((Factor_operacionesContext)_localctx).tiene_signo.start,((Factor_operacionesContext)_localctx).tiene_signo.stop):null)
-			val_dir = self.funcdir.funciones[self.nombrefuncion]["tabla"].get_direccion(val)
 
 			if not val.startswith("&"):
+			    val_dir = self.constantes.get_direccion(val)
 			    val_tipo = self.cuadruplo.pop_type()
 			    if signo:
 			        if signo == "-":
-			            self.funcdir.funciones[self.nombrefuncion]["tabla"].add_constante("-{val}",val_tipo,val_dir)
+			            self.constantes.add_constante("-{val}",val_tipo,val_dir)
 			        else: 
-			            self.funcdir.funciones[self.nombrefuncion]["tabla"].add_constante("+{val}",val_tipo,val_dir)
+			            self.constantes.add_constante("+{val}",val_tipo,val_dir)
 			else:
+			    val_dir = self.funcdir.funciones[self.nombrefuncion]["tabla"].get_direccion(val)
 			    val_tipo = self.funcdir.funciones[self.nombrefuncion]["tabla"].get_tipo(val)
 			    if signo:
 			        if signo == "-":
@@ -1523,7 +1545,7 @@ public class PatitoParserParser extends Parser {
 
 				direccion = self.contadorenteroconstante
 				self.contadorenteroconstante = direccion + 1
-				self.funcdir.funciones[self.nombrefuncion]["tabla"].add_constante((((CteContext)_localctx).CTE_ENTERO!=null?((CteContext)_localctx).CTE_ENTERO.getText():null),"entero",direccion)
+				self.constantes.add_constante((((CteContext)_localctx).CTE_ENTERO!=null?((CteContext)_localctx).CTE_ENTERO.getText():null),"entero",direccion)
 				self.cuadruplo.push_type("entero")
 
 				}
@@ -1536,7 +1558,7 @@ public class PatitoParserParser extends Parser {
 
 				direccion = self.contadorflotanteconstante
 				self.contadorflotanteconstante = direccion + 1
-				self.funcdir.funciones[self.nombrefuncion]["tabla"].add_constante((((CteContext)_localctx).CTE_FLOTANTE!=null?((CteContext)_localctx).CTE_FLOTANTE.getText():null),"flotante",direccion)
+				self.constantes.add_constante((((CteContext)_localctx).CTE_FLOTANTE!=null?((CteContext)_localctx).CTE_FLOTANTE.getText():null),"flotante",direccion)
 				self.cuadruplo.push_type("flotante")
 
 				}
