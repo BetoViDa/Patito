@@ -315,6 +315,8 @@ class PatitoParserParser ( Parser ):
             self.match(PatitoParserParser.FIN)
 
             self.cuadruplo.add_end_Cuadruplo()
+            tablaconst = self.constantes.get_tabla()
+            self.cuadruplo.generate_document(self.nombrefuncion,tablaconst,)
 
         except RecognitionException as re:
             localctx.exception = re

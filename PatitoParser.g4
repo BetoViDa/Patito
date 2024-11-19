@@ -27,6 +27,8 @@ self.funcdir.add_funcion($ID.text,"programa")
 } SEMI tiene_variables tiene_funciones INICIO cuerpo FIN
 {
 self.cuadruplo.add_end_Cuadruplo()
+tablaconst = self.constantes.get_tabla()
+self.cuadruplo.generate_document(self.nombrefuncion,tablaconst,)
 };
 
 tiene_variables : vars?;

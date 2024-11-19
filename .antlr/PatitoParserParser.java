@@ -180,6 +180,8 @@ public class PatitoParserParser extends Parser {
 			match(FIN);
 
 			self.cuadruplo.add_end_Cuadruplo()
+			tablaconst = self.constantes.get_tabla()
+			self.cuadruplo.generate_document(self.nombrefuncion,tablaconst,)
 
 			}
 		}

@@ -1,3 +1,7 @@
+import os
+from pathlib import Path
+
+
 class Cuadruplo:
     def __init__(self, op, arg1, arg2, res):
         self.op = op
@@ -10,6 +14,10 @@ class Cuadruplo:
 
     def __strsf__(self):
         return f"{self.op},{self.arg1},{self.arg2},{self.res}"
+    
+    def to_string_without_format(self):
+        return f"{self.op},{self.arg1},{self.arg2},{self.res}"
+
 
 
 class Cuadruplotabla:
@@ -44,7 +52,7 @@ class Cuadruplotabla:
         self.global_count += 1
         
     def add_end_Cuadruplo(self):
-        self.add_Cuadruplo(12,"","","")
+        self.add_Cuadruplo(13,"","","")
 
     def push_operator(self, operator):
         self.operators_pile.append(operator)
@@ -117,3 +125,29 @@ class Cuadruplotabla:
         for index, quad in enumerate(self.Cuadruplo):
             print(f"\t|\t{index}:\t|{quad}\t|")
             print("\t---------------------------------------------------------------------------------")
+    
+    
+    
+    def generate_document(self,file_name, obj):
+        # Generar el contenido del documento
+        quadruple_doc = "\n".join([quad.to_string_without_format() for quad in self.Cuadruplo])
+        
+        obj_entries = "\n".join([f"{entry['direccion']},{entry['nombre']}" for entry in obj.values()])
+        
+        
+        final_doc = f"{quadruple_doc}\n&\n{obj_entries}\n"
+        
+        # Crear el directorio si no existe
+        folder_path = Path("./")
+        folder_path.mkdir(parents=True, exist_ok=True)
+        
+        # Definir la ruta completa del archivo
+        file_path = folder_path / f"{file_name}.txt"
+        
+        # Escribir el contenido en el archivo
+        try:
+            with open(file_path, "w", encoding="utf-8") as file:
+                file.write(final_doc)
+            print(f"File has been saved as {file_name}.txt at current folder\n")
+        except Exception as e:
+            print(f"Error writing the file: {e}")
