@@ -287,23 +287,26 @@ cuentaelse = self.cuadruplo.get_current_count()
 self.cuadruplo.edit_Cuadruplo_by_label(salto,cuentaelse)
 } cuerpo )? ;
 
-ciclo : MIENTRAS LPAREN expresion RPAREN HAZ
+ciclo: MIENTRAS LPAREN
 {
-falso = self.cuadruplo.nuevo_label()
-op = self.cuadruplo.peek_operating()
-cicloInd = self.cuadruplo.get_current_count()
-self.cuadruplo.add_conditional_jump(op,falso)
-self.cuadruplo.push_jump(falso)
-self.cuadruplo.push_jump(cicloInd)
-} cuerpo SEMI
+inicioCiclo = self.cuadruplo.get_current_count();
+self.cuadruplo.push_jump(inicioCiclo);
+} expresion RPAREN HAZ
 {
-op = self.cuadruplo.pop_operating()
-salto = self.cuadruplo.pop_jump()
-self.cuadruplo.add_cycle_jump(op,salto)
-cuentafinal = self.cuadruplo.get_current_count()
-salto = self.cuadruplo.pop_jump()
-self.cuadruplo.edit_Cuadruplo_by_label(salto,cuentafinal) 
-} ;
+falso = self.cuadruplo.nuevo_label();
+op = self.cuadruplo.peek_operating();
+self.cuadruplo.add_conditional_jump(op, falso);
+self.cuadruplo.push_jump(falso);
+} 
+cuerpo SEMI
+{
+saltoFalso = self.cuadruplo.pop_jump();
+inicioCiclo = self.cuadruplo.pop_jump();
+self.cuadruplo.add_by_pass_jump(inicioCiclo);
+cuentafinal = self.cuadruplo.get_current_count();
+self.cuadruplo.edit_Cuadruplo_by_label(saltoFalso, cuentafinal);
+};
+
 
 llamada : ID LPAREN complemento_llamada RPAREN SEMI ;
 complemento_llamada : (tiene_expresion)? ;
