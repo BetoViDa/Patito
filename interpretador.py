@@ -35,7 +35,7 @@ class Interpreter:
             return "temp"
         elif 10000 <= address <= 14999:
             return "local"
-        raise ValueError(f"Invalid address: {address}")
+        raise ValueError(f"Direccion invalida: {address}")
 
     def get_base_address(self, segment):
         if segment == "global":
@@ -44,7 +44,7 @@ class Interpreter:
             return 5000
         elif segment == "local":
             return 10000
-        raise ValueError(f"Invalid memory segment: {segment}")
+        raise ValueError(f"Segmento de memoria invalido: {segment}")
 
     def get_value(self, address):
         if address is None or address == "":
@@ -56,7 +56,7 @@ class Interpreter:
         base_address = self.get_base_address(segment)
         value = self.memory[segment][address - base_address]
         if value is None:
-            raise ValueError(f"Variable at address {address} is not initialized")
+            raise ValueError(f"Variable en direccion {address} no inicializada")
         return value
 
     def set_value(self, address, value):
@@ -105,15 +105,15 @@ class Interpreter:
                 elif op == 13:  # END
                     return
                 else:
-                    raise ValueError(f"Unknown operation: {op}")
+                    raise ValueError(f"Operacion desconocida: {op}")
             except Exception as error:
-                print(f"Error at instruction {instruction_pointer}: {error}")
+                print(f"Error en instruccion {instruction_pointer}: {error}")
                 return
 
             if (
-                instruction_pointer < len(self.quadruples) - 1 and
+                instruction_pointer < len(self.quadruples)  and
                 int(self.quadruples[instruction_pointer + 1][0]) != 8
-            ) or instruction_pointer == len(self.quadruples) - 1:
+            ) or instruction_pointer == len(self.quadruples) :
                 if print_buffer:
                     print("".join(print_buffer))
                     print_buffer = []

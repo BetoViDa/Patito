@@ -2,7 +2,6 @@ import os
 from interpretador import Interpreter
 
 def main():
-    print("Los archivos de prueba deben estar en la carpeta tests")
     file_name = input("Nombre del archivo sin extensión: ")
 
     try:
