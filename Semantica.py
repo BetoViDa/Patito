@@ -36,7 +36,7 @@ class TablaCons():
             if direccion :
                 return direccion["direccion"]
             else:
-                raise ValueError("Error en get direccion",nombre)
+                return False
             
     def encontrar_por_nombre(self,nombre):
         return next((item for item in self.tabla.values() if item["nombre"] == nombre), None)

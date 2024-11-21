@@ -824,6 +824,15 @@ public class PatitoParserParser extends Parser {
 			op_dir = self.funcdir.funciones[self.nombrefuncion]["tabla"].get_direccion(op)
 			if not op_dir:
 			    op_dir = self.constantes.get_direccion(op)
+			    if not op_dir:
+			        if '.' in op:
+			            op_dir = self.contadorflotanteconstante
+			            self.contadorflotanteconstante = op_dir + 1
+			            op = self.constantes.add_constante(op,"flotante",op_dir)
+			        else:
+			            op_dir = self.contadorenteroconstante
+			            self.contadorenteroconstante = op_dir + 1
+			            op = self.constantes.add_constante(op,"entero",op_dir)
 			self.cuadruplo.add_assign_Cuadruplo(self.semantic["="]["codigo"],op_dir,asignar_dir)
 
 			setState(156);
@@ -1393,8 +1402,13 @@ public class PatitoParserParser extends Parser {
 			signo = (((Factor_operacionesContext)_localctx).tiene_signo!=null?_input.getText(((Factor_operacionesContext)_localctx).tiene_signo.start,((Factor_operacionesContext)_localctx).tiene_signo.stop):null)
 
 			if not val.startswith("&"):
-			    val_dir = self.constantes.get_direccion(val)
 			    val_tipo = self.cuadruplo.pop_type()
+			    if val_tipo == "entero":
+			        val_dir = self.contadorenteroconstante
+			        self.contadorenteroconstante = val_dir +1
+			    else:
+			        val_dir = self.contadorflotanteconstante
+			        self.contadorflotanteconstante = val_dir +1
 			    if signo:
 			        if signo == "-":
 			            self.constantes.add_constante("-{val}",val_tipo,val_dir)
@@ -1989,6 +2003,15 @@ public class PatitoParserParser extends Parser {
 				add = self.funcdir.funciones[self.nombrefuncion]["tabla"].get_direccion(val)
 				if not add:
 				    add = self.constantes.get_direccion(val)
+				    if not add:
+				        if '.' in val:
+				            add = self.contadorflotanteconstante
+				            self.contadorflotanteconstante = add + 1
+				            val = self.constantes.add_constante(val,"flotante",add)
+				        else:
+				            add = self.contadorenteroconstante
+				            self.contadorenteroconstante = add + 1
+				            val = self.constantes.add_constante(val,"entero",add)
 				self.cuadruplo.add_print_Cuadruplo(add)
 
 				setState(282);
