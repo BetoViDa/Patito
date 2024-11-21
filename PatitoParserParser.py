@@ -300,6 +300,8 @@ class PatitoParserParser ( Parser ):
 
             self.nombrefuncion = (None if localctx._ID is None else localctx._ID.text)
             self.funcdir.add_funcion((None if localctx._ID is None else localctx._ID.text),"programa")
+            self.constantes.add_constante(-1,"entero",self.contadorenteroconstante)
+            self.contadorenteroconstante = self.contadorenteroconstante + 1
 
             self.state = 69
             self.match(PatitoParserParser.SEMI)
@@ -1832,6 +1834,21 @@ class PatitoParserParser ( Parser ):
                 val_tipo = self.funcdir.funciones[self.nombrefuncion]["tabla"].get_tipo(val)
                 if signo:
                     if signo == "-":
+                        temp = self.cuadruplo.nuevo_temp()
+                        operador = "*"
+                        op_dir = 15000
+                        op_tipo = "entero"
+                        temp_tipo = self.semantic[operador][val_tipo][op_tipo]
+                        if temp_tipo == "entero":
+                            direccion = self.contadorenterotemporal
+                            self.contadorenterotemporal = direccion + 1
+                        else:
+                            direccion = self.contadorflotantetemporal
+                            self.contadorflotantetemporal = direccion + 1
+                            
+                        tempadd = self.funcdir.funciones[self.nombrefuncion]["tabla"].add_temp(temp,temp_tipo,direccion)
+                        self.cuadruplo.add_Cuadruplo(self.semantic[operador]["codigo"],val_dir,op_dir,direccion)
+                        self.cuadruplo.add_assign_Cuadruplo(self.semantic["="]["codigo"],direccion,val_dir)
                         newval = signo + val
                         self.funcdir.funciones[self.nombrefuncion]["tabla"].editar_val_por_direccion(val_dir,newval)
                     else: 
