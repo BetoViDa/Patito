@@ -17,7 +17,7 @@ class Interpreter:
             if value.startswith('"') and value.endswith('"'):
                 value = value[1:-1].replace("\\n", "\n")
             else:
-                value = float(value) if value.replace('.', '', 1).isdigit() else value
+                value = float(value) 
             constants[int(address)] = value
         return constants
 

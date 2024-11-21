@@ -335,7 +335,7 @@ public class PatitoParserParser extends Parser {
 				    elif tipo == "flotante":
 				        direccion = self.contadorflotanteglobal
 				        self.funcdir.funciones[self.nombrefuncion]["tabla"].add_var(variable,tipo,direccion)
-				        self.contadorflotante = self.contadorflotanteglobal + 1
+				        self.contadorflotanteglobal = self.contadorflotanteglobal + 1
 				    else:
 				        raise ValueError(f"Variable no identificada")
 
@@ -926,12 +926,30 @@ public class PatitoParserParser extends Parser {
 				op2_dir = self.funcdir.funciones[self.nombrefuncion]["tabla"].get_direccion(op2)
 				if not op2_dir:
 				    op2_dir = self.constantes.get_direccion(op2)
+				    if not op2_dir:
+				        if '.' in op2:
+				            op2_dir = self.contadorflotanteconstante
+				            self.contadorflotanteconstante = op2_dir + 1
+				            op2 = self.constantes.add_constante(op2,"flotante",op2_dir)
+				        else:
+				            op2_dir = self.contadorenteroconstante
+				            self.contadorenteroconstante = op2_dir + 1
+				            op2 = self.constantes.add_constante(op2,"entero",op2_dir)
 
 				op1 = self.cuadruplo.pop_operating()
 				op1_tipo = self.cuadruplo.pop_type()
 				op1_dir = self.funcdir.funciones[self.nombrefuncion]["tabla"].get_direccion(op1)
 				if not op1_dir:
 				    op1_dir = self.constantes.get_direccion(op1)
+				    if not op1_dir:
+				        if '.' in op1:
+				            op1_dir = self.contadorflotanteconstante
+				            self.contadorflotanteconstante = op1_dir + 1
+				            op1 = self.constantes.add_constante(op1,"flotante",op1_dir)
+				        else:
+				            op1_dir = self.contadorenteroconstante
+				            self.contadorenteroconstante = op1_dir + 1
+				            op1 = self.constantes.add_constante(op2,"entero",op1_dir)
 
 				temp_tipo = self.semantic[operador][op1_tipo][op2_tipo]
 				if temp_tipo == "entero":
@@ -1088,12 +1106,31 @@ public class PatitoParserParser extends Parser {
 				op2_dir = self.funcdir.funciones[self.nombrefuncion]["tabla"].get_direccion(op2)
 				if not op2_dir:
 				    op2_dir = self.constantes.get_direccion(op2)
+				    if not op2_dir:
+				        if '.' in op2:
+				            op2_dir = self.contadorflotanteconstante
+				            self.contadorflotanteconstante = op2_dir + 1
+				            op2 = self.constantes.add_constante(op2,"flotante",op2_dir)
+				        else:
+				            op2_dir = self.contadorenteroconstante
+				            self.contadorenteroconstante = op2_dir + 1
+				            op2 = self.constantes.add_constante(op2,"entero",op2_dir)
 
 				op1 = self.cuadruplo.pop_operating()
 				op1_tipo = self.cuadruplo.pop_type()
 				op1_dir = self.funcdir.funciones[self.nombrefuncion]["tabla"].get_direccion(op1)
 				if not op1_dir:
 				    op1_dir = self.constantes.get_direccion(op1)
+				    if not op1_dir:
+				        if '.' in op1:
+				            op1_dir = self.contadorflotanteconstante
+				            self.contadorflotanteconstante = op1_dir + 1
+				            op1 = self.constantes.add_constante(op1,"flotante",op1_dir)
+				        else:
+				            op1_dir = self.contadorenteroconstante
+				            self.contadorenteroconstante = op1_dir + 1
+				            op1 = self.constantes.add_constante(op2,"entero",op1_dir)
+
 
 				temp_tipo = self.semantic[operador][op1_tipo][op2_tipo]
 				if temp_tipo == "entero":
@@ -1219,12 +1256,31 @@ public class PatitoParserParser extends Parser {
 				op2_dir = self.funcdir.funciones[self.nombrefuncion]["tabla"].get_direccion(op2)
 				if not op2_dir:
 				    op2_dir = self.constantes.get_direccion(op2)
+				    if not op2_dir:
+				        if '.' in op2:
+				            op2_dir = self.contadorflotanteconstante
+				            self.contadorflotanteconstante = op2_dir + 1
+				            op2 = self.constantes.add_constante(op2,"flotante",op2_dir)
+				        else:
+				            op2_dir = self.contadorenteroconstante
+				            self.contadorenteroconstante = op2_dir + 1
+				            op2 = self.constantes.add_constante(op2,"entero",op2_dir)
 
 				op1 = self.cuadruplo.pop_operating()
 				op1_tipo = self.cuadruplo.pop_type()
 				op1_dir = self.funcdir.funciones[self.nombrefuncion]["tabla"].get_direccion(op1)
 				if not op1_dir:
 				    op1_dir = self.constantes.get_direccion(op1)
+				    if not op1_dir:
+				        if '.' in op1:
+				            op1_dir = self.contadorflotanteconstante
+				            self.contadorflotanteconstante = op1_dir + 1
+				            op1 = self.constantes.add_constante(op1,"flotante",op1_dir)
+				        else:
+				            op1_dir = self.contadorenteroconstante
+				            self.contadorenteroconstante = op1_dir + 1
+				            op1 = self.constantes.add_constante(op2,"entero",op1_dir)
+
 
 				temp_tipo = self.semantic[operador][op1_tipo][op2_tipo]
 				if temp_tipo == "entero":
@@ -1411,9 +1467,11 @@ public class PatitoParserParser extends Parser {
 			        self.contadorflotanteconstante = val_dir +1
 			    if signo:
 			        if signo == "-":
-			            self.constantes.add_constante("-{val}",val_tipo,val_dir)
+			            val = "-" + val
+			            self.constantes.add_constante(val,val_tipo,val_dir)
 			        else: 
-			            self.constantes.add_constante("+{val}",val_tipo,val_dir)
+			            val = "+" + val
+			            self.constantes.add_constante(val,val_tipo,val_dir)
 			else:
 			    val_dir = self.funcdir.funciones[self.nombrefuncion]["tabla"].get_direccion(val)
 			    val_tipo = self.funcdir.funciones[self.nombrefuncion]["tabla"].get_tipo(val)

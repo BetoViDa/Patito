@@ -95,7 +95,8 @@ class TablaVar:
     def editar_val_por_direccion(self,direccion,valor):
         val = next((item for item in self.tabla.values() if item["direccion"] == direccion), False)
         if val:
-            self.tabla[val["nombre"]]["nombre"] = valor
+            self.add_var(str(valor),self.tabla[val["nombre"]]["tipo"],self.tabla[val["nombre"]]["direccion"])
+            del self.tabla[val["nombre"]]
         else:
             raise ValueError(f"Error en editar por direccion")
     
